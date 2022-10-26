@@ -1,0 +1,37 @@
+.primo-p + span{/*significa solo il primo span dopo la classe primo-p*/
+    color: red; 
+}
+
+input[type="text"]{
+    border: 1px solid red;
+}
+
+input[type="text"]:focus{
+    border: 5px solid red;
+}
+
+input[type="checkbox"]:checked + div{
+    background-color: yellow;
+}/*prendo un input che ha come tipo checkbox, voglio che all azione checked cioè quando la clicco, il div diventi giallo */
+
+table tr:nth-of-type(odd){/*in ogni table mi selezioni la numero 1 e fai l azione che metto tra le graffem tra le parentesi tonde metti il numero della linea interessata o il dispari o il pari, quelle che vuoi selezionare*/
+    background-color: yellow;
+
+}
+
+table tr:first-of-type td:hover{
+    /*  hover è una pseudo classe, hover vuol dire al passaggio del mouse*/
+    color: white;
+    transition: color 0,5s;
+}
+
+table tr:last-of-type td:after{
+    content: ">";
+}
+
+table tr:last-of-type td:before{
+    content: ">";
+}
+table tr:last-of-type td:hover :before{
+    content: ">";
+}

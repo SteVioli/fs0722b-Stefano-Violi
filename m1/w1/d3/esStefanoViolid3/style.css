@@ -1,0 +1,55 @@
+/* font-family: 'Ubuntu', sans-serif; */
+
+
+
+
+#testocentrato{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    
+}
+
+.backheader{
+    background-color: rgba(192, 237, 232, 0.187);
+    
+}
+
+#testocentrato p{
+    background-color: rgba(255, 196, 0, 0.079);
+    border-top: rgba(255, 173, 80, 0.386) solid;
+    border-top-width: 1px;
+    padding: 10px;
+    font-size: 12px;
+    
+}
+
+.dimbody{
+    margin-left: 25%;
+    margin-right: 25%;
+   
+    }
+
+
+
+.didascalia{
+    color: grey;
+    text-align: center;
+}
+
+.classh1{
+    text-align: center;
+}
+
+.margFeatured{
+    border-left: rgb(237, 199, 64) solid;
+    padding-left: 15px;
+}
+
+.FEATURED{
+    color: rgb(178, 91, 10);
+}
+
+.bordblu{
+    border-bottom: rgb(178, 216, 240) solid 0.5px;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,45 @@
+:root{
+    font-size: 25px;
+}
+/* si applicano i font DI BASE GLOBALE SUL BODY IMPORTANTE */
+
+@font-face {
+    font-family: fontpersonale;
+    src: url('../font/Roboto-Regular.ttf') format('truetype');/*guarda bene il percorso che gli fai fare per l url, in questo caso è fuori in un altra cartella infatti per uscire si fa ../ */
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+#p1{color:rgba(0, 0, 0,0.3);;
+    font-size: 16px;
+    font-family: fontpersonale;
+    /*vh è l altezza della finestra in percentuali, in questo case 3%* sui font non ha senso perchè se rimpicciolisci la pagina poi non si vede più niente, per questo si utilizzano solo sui BLOCCHI */
+}
+
+#p2{
+    font-size: 0.8rem; 
+    font-family: 'Merriweather', serif;
+    font-weight: 400; /* questo è per il peso,400regular 300 light, se prendi il font con un peso e lo digiti correttamente quello che vuoi, ti prende la roba che hai scaricato, altrimenti da un peso di default che "improvvisa" una dimensione che non è detto sia lo stesso peso che puoi trovare sul sito */
+}  
+
+article{
+    line-height: 1.5;/* è l'altezza della linea */
+}
+
+#p3{
+    font-size: 20px;
+}
+#p3 span{
+    font-size: 1em;/*vale 20px*/
+}
+
+/* 1rem equivale a 16 px, il size di default , un rem cambia a seconda dell elemento radice cioe root: che si trova sempre in alto e da il default alla pagina*/
+
+.line{
+    background-color: green;
+    line-height: 200px;
+}
