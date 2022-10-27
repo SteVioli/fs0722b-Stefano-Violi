@@ -1,0 +1,124 @@
+/* IMPOSTAZIONI GENERALI */
+img{
+    max-width:100%
+}
+:root{
+    font-family: 'Poppins', sans-serif;
+}
+caption{
+    font-style: italic;
+}
+.bold{
+    font-weight: 600;
+    text-align: center;
+}
+b{
+    font-size: 20px;
+}
+body{
+    max-width: 100%;
+    background-image: url(../img/sfondo.png);
+}
+.blubot{
+    background-color: blue;
+    color: white;
+}
+
+
+/* HEADER */
+/*Prima ho diviso in sezioni le cose da fare poi, sono sceso, cercando di personalizzare il più possibile ogni singolo elemento*/
+header{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: rgb(88, 160, 227);
+    border-bottom: 3px rgba(128, 128, 128, 0.394) solid;
+}
+
+.logoepi{
+    text-align: center;
+    
+    
+}
+.menuintro{font: size 30px;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.menuintrop{
+    padding-top: 5px;
+}
+
+/* MAIN */
+
+
+#bgmain{
+
+    background-color: white;
+    border-left:2px rgba(128, 128, 128, 0.394) solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.h1format{
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.mainatt{
+    text-align: center;
+}
+.didmain{
+    color: rgba(128, 128, 128, 0.755);
+}
+.bviola{
+    color: blueviolet;
+    font-weight: 600
+}
+.n1{ 
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0;
+}
+.licen{
+    padding-left: 50px;
+}
+.tab2{text-align: center;
+
+}
+
+table td{
+    border: 1px solid black
+}
+.tab2{
+    background-color: rgba(76, 76, 183, 0.454);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.n2{
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0;
+}
+
+#bgfooter{
+    background-color: rgba(8, 106, 119, 0.612);
+    color: white;
+}
+
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */

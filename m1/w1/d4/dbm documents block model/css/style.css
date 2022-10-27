@@ -1,0 +1,106 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#q2{
+    overflow: hidden;  /*vuol dire quello che esce va nascosto*/
+} 
+
+#q3{
+    overflow-y: scroll; /* overflow: scroll fa comparire delle barre di scorrimento,,,, overflow-y: scroll fa scorrere solo verticale,,,,, overflow-y: auto ti crea lo scorrimento solo se è necessario lo scorrimento*/
+}
+
+#q4{
+    width: auto; /* uso auto per disattivare momentaneamente una grandezza */
+    max-width: 600px; 
+}
+
+#q5{
+    /*NON UTILIZZARE IL PADDING PER STACCARE I CONTENUTI*/
+    padding: 15px; /*padding è una spaccatura grafica che si pone tra il bordo e il contenuto , il padding di sua natura distende la natura degli elementi (in questo caso aggiunge 15 px in tutti i lati) */ /* se crivi padding: 10px e 20 px; top bottom 10px, left right: 20px  ,,,,,,, padding: 15px 5px 1px 15px; top right bottom left  QUESTE FORMULE VALGONO ANCHE PER IL MARGINE*/
+    box-sizing: border-box; /*se uso questo il padding viene ritagliato all interno del contenuto, quindi viene ridotto di 15 */
+    margin-top:100px ; /*PER STACCARE GLI ELEMENTI SI UTILIZZA IL MARGIN!! */
+    margin-left:100px ;
+
+}
+
+#q6{
+    margin:12px auto; /* cosi agisce finchè c'è spazio laterale SE USASSI MARGIN-LEFT con questi valori, andrebbe tutto a destra, mettendolo così si adatta a destra e a sinistra ,,,,, il primo valore becca altezza su e giu, il secondo larghezza destra e sinistra*/
+}
+
+/*TEXT ALIGN allinea solo il testo*/
+
+#q7{
+    border: 4px solid black;
+    border-bottom: none;
+    border-bottom-left-radius: 50%; /* ridimensione e "smuzza i lati/angoli o coi px (rimane tipo un quadrato) cone le percentuali diventa un cerchio PUOI SMUZZARE TUTTI GLI ANGOLI CHE VUOI A SECONDA DEL BORDER CHE SELEZIONI BORDER-BOTTOM-LEFT-RADIUS per esempio*/
+    border-top-right-radius:25% ;
+    background-color: transparent;
+    outline: 5px solid rgba(255, 0, 0, 0.16);/*è un bordo che sta al di fuori dell elemento , non intacca le dimensioni dello stesso*/
+    outline-offset:5px ;/*lo stacca dal bordo*/
+}
+
+#q8{
+    background-color: green;
+    height: 100vh;/*non si può dare un altezza, funziona solo se fa parte di un genitore che ha un altezza specifica*/
+}
+
+/* avere un layout che si allarga in maniera elastica è come giocare con la fortuna, su mobile avresti roba schiacciata, per il mobile serve mettere un mix di fisso ed elastico */
+
+
+
+/*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  *//*  LAYOUT  */
+
+.colonna{
+    width: calc(100% /  - 15px) ;/*formula per dare dimensioni*/
+    height: 200px;
+    background-color: bisque;
+    border: 1px solid black;
+    float: right; /* cn float left o right fanno andare gli elementi a dx o sin , sconsigliato perchè vanno a dx o sx e basta e serve sempre fare clear:both con una classe*/
+}
+
+.clearfix{
+    clear: both;
+    visibility: hidden;
+}
+
+.imgright{
+    float:left; /*cerca di non usare il float*/
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.colonna.no-float{
+    float: none;
+    display: inline-block;/*inline-block si comportano come un blocco ma sono inline*/
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+/*text align center: se c'è un elemento linea allinea il contenuto all'interno dell'elemento, serve un genitore da dargli 
+
+/*altre regole css*/
+#griglia-esperimenti .colonna:nth-last-of-type(4){
+    opacity: 0.5;
+    box-shadow: 3px 3px 5px black;
+}
+
+#griglia-esperimenti .colonna:nth-last-of-type(5){
+    visibility: hidden;
+    
+}
+#griglia-esperimenti .colonna:nth-last-of-type(6){
+    display: none;
+    
+}
+:target{
+    background-color: red;
+}

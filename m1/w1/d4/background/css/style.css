@@ -1,0 +1,41 @@
+#bg1{
+    background-image: url(https://picsum.photos/200/300);
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: contain;/*cosi hai prio sull immagine e non verrà mai tagliata*/
+}
+
+#bg2{
+    background-image: url(https://picsum.photos/200/300);
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;/*fa l opposto di contain e da priorità al contenitore*/
+    background-position: center;/*a seconda della posizione t prende l immagine o al centro o dall alto etc*/
+}
+#bg3{   
+    background-image: url(https://picsum.photos/200/300);
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    background-size: 50px 100px;
+    background-position: center;
+}    
+#bg4{   
+    background-image: url(https://picsum.photos/200/300), url(https://picsum.photos/200/300);
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    background-size: 25px;
+    background-position:0 180px, 150px 0;
+    background-repeat: no-repeat, repeat
+}    /* se metti più immagini etc puoi fare + abbinamenti e muovere oggetti anche asse x per primo qua e y secondo 0 180px della prima immagine 150px 0 la seconda */
+
+
+
+img{
+    max-width: 100%;
+}
