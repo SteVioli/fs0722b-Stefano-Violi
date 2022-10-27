@@ -45,10 +45,10 @@ header{
     padding-top: 25px;
     padding-bottom: 25px;
 }
-.menuintrop{
-    padding-top: 5px;
-}
 
+.licol{
+    color: white;
+}
 /* MAIN */
 
 
@@ -107,18 +107,23 @@ table td{
     padding-bottom: 0;
 }
 
-#bgfooter{
-    background-color: rgba(8, 106, 119, 0.612);
-    color: white;
+form{
+    padding-left: 15px;
+}
+/* FOOTER*/
+footer{
+    text-align: center;
 }
 
-
-/* ELEMENTI NEL MAIN - ARTICLE */
-
-/* TABELLE */
-
-/* FORM */
-
-/* ELEMENTI NELL' ASIDE */
-
-/* FOOTER */
+#bgfooter{
+    background-color: rgb(8, 106, 119);
+    color: white;
+    border-left:2px rgba(128, 128, 128, 0.394) solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.n3{
+    background-color: rgba(128, 128, 128, 0.348);
+    border: 0.3px rgba(128, 128, 128, 0.758) solid;
+}
