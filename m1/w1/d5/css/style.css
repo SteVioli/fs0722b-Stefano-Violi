@@ -156,12 +156,16 @@ ul {
     text-decoration: underline;
 }
 .div{
-   
-    border-top: solid #c8e7f0 2px;
+    padding-bottom: 10%;
+    border-bottom: solid #c8e7f0 2px;
 }
 #linkout{
     color: #25a2c3;
 }
+.pp{
+    padding-top: 10%;
+}
+
 /*
 ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
 ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
@@ -185,8 +189,8 @@ ul {
 #asd{
     border: #dee1e3 solid 1px;
     border-radius: 2%;
-
 }
+
 /* 
 ██╗   ██╗ █████╗ ██████╗ ██╗███████╗
 ██║   ██║██╔══██╗██╔══██╗██║██╔════╝
@@ -204,6 +208,7 @@ ul {
 article>p{
     font-size: 2.5em;
 }
+
 
 /* 
  █████╗ ██████╗ ████████╗██╗ ██████╗██╗     ███████╗
