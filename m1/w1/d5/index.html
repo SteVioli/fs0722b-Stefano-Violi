@@ -6,7 +6,6 @@
     <meta name="Da zero a Epicode con i corsi completi per diventare uno sviluppatore professionista in 3 mesi." content="width=device-width, initial-scale=1.0">
     <title>Corso Web Developer - Epicode school</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
 </head>
 <body>
 
@@ -55,23 +55,25 @@ ho definito la parte nera come header quindi inserisco il logo
     <!-- seconda sezione dove mostriamo le opportunità che si hanno dopo aver conseguito il titolo di web developer utilizzo degli h3 perchè come h2 voglio utilizzare la parte in rosso dove parla delle garanzie di epicode-->
 
     <section title="Opportunità web developer">
-        <h3 class="padh">Tutti di cercheranno</h3>
+        <h3 class="padh"> <a id="linkout" href="https://www.epicode.com" target="_blank">Tutti di cercheranno</a></h3>
         <p>Sono 30.000 in Italia le posizioni di developer scoperte, scegli quella che ti stimola di più</p>
-        <h3>Lavora dove vuoi</h3>
-        <p>Lavora da casa,in riva al mare o in montagna</p>
-        <img src="images/notebook.jpg" title="Strumento Web Developer">
-        <h3>Scegli il tuo ruolo</h3>
+        <h3><a id="linkout" href="https://www.epicode.com" target="_blank">Lavora dove vuoi</a></h3>
+        <p id="stacco">Lavora da casa,in riva al mare o in montagna.</p>
+        <figure>
+        <img class="img1" src="images/notebook.jpg" title="Strumento Web Developer">
+        </figure>
+        <h3><a id="linkout" href="https://www.epicode.com" target="_blank">Scegli il tuo ruolo</a></h3>
         <p>Potrai scegliere se essere Azienda, Freelance o Startup</p>
-        <h3>Lavora in libertà</h3>
-        <p>Non serve lavorare in ufficio per essere creatori di prodotti digitali</p>
+        <h3><a id="linkout" href="https://www.epicode.com" target="_blank">Lavora in libertà</a></h3>
+        <p id="stacco2">Non serve lavorare in ufficio per essere creatori di prodotti digitali</p>
     </section>
 
     <!-- Sezione distaccata perchè importante in quanto parla di garanzie relative che Epicode propone (per questo ho utilizzato un h2)-->
 
-    <section title="Epicode Garanzie">
-        <h2>Epicode garantisce</h2>
-        <p><i>"3 mesi intensivi di corso che cambierrano la tua vita"</i></p>
-        <caption title="CEO EPICODE">Mario Rossi <br> CEO, Epicode</caption>
+    <section title="Epicode Garanzie" id="garantisce">
+        <h2 class="gar1">Epicode garantisce</h2>
+        <blockquote class="gar2"><i>"3 mesi intensivi di corso che cambierrano la tua vita"</i></blockquote>
+        <p title="CEO EPICODE" class="gar3">Mario Rossi <br><span id="ceo">CEO, Epicode</span></p>
     </section>
 </main>
 
@@ -93,31 +95,37 @@ h2 le info riguardo a cosa ti garantisce epicode (la parte col background rossa)
 <!-- creo degli articoli per differenziare il contenuto principale, visto che il sito porta l'utente ad articoli di rilevanza differente rispetto al main -->
 
 <article title="Il tuo PC">
-    <img src="images/foto1.jpg" title="Il tuo PC" alt="PC">
-    <h4>Il tuo PC</h4>
+    <div id="asd">
+    <img class="imgf" src="images/foto1.jpg" title="Il tuo PC" alt="PC">
+    <h4><a id="linkout" href="https://www.google.com/search?q=pc&rlz=1C1VDKB_itIT929IT929&oq=pc&aqs=chrome..69i57j0i131i433i512l4j69i61j69i60l2.558j0j7&sourceid=chrome&ie=UTF-8" title="PC" target="_blank">Il tuo PC</a></h4>
     <p>Se vuoi diventare developer è l'unico strumento di cui hai bisogno.</p>
+    </div>
 </article>
 <article title="Impara ora">
-    <img src="images/foto2.jpg" title="Imparare" alt="Imparare">
-    <h4>Impara ora</h4>
+    <div id="asd">
+    <img class="imgf" src="images/foto2.jpg" title="Imparare" alt="Imparare">
+    <h4><a id="linkout" href="https://www.epicode.com" target="blank" title="epicode"> Impara ora</a></h4>
     <p>Impara da chi diventerai tra qualche anno, e diventa una rockstar come loro.</p>
+    </div>
 </article>
 <article title="lavora subito">
-    <img src="images/foto3.jpg" title="Lavora in gruppo" alt="Lavoro Team work">
-    <h4>Lavora subito</h4>
+    <div id="asd">
+    <img class="imgf" src="images/foto3.jpg" title="Lavora in gruppo" alt="Lavoro Team work">
+    <h4><a id="linkout" href="https://www.epicode.com" target="_blank">Lavora subito</a></h4>
     <p>Sappiamo cosa vogliono le aziende, perchè lavoriamo con loro.</p>
+    </div>
 </article>
 <footer>
     <h2>Contattaci</h2>
     <ul>
-        <li>(+39)11223456</li>
-        <li>info@epicode.school</li>
+        <li><i class="fa-solid fa-phone"></i><a id="cont" href="tel:+3911223456">(+39)11223456</a></li>
+        <li><a id="cont" href="mailto:info@epicode.school">info@epicode.school</a></li>
         <li>Via appia 1 - 00100 Roma (RM)</li>
     </ul>
-    <div>
+    <div class="div">
         <!-- creo un div modificando dimensioni e carattere per creare una linea di stacco -->
     </div>
-    © 2021, Immagini di Pixabay (pixabay creare collegamento) .
+    <p>© 2021, Immagini di <a id="cont" href="https://www.pixabay.com">Pixabay</a> .</p>
         
 
 
