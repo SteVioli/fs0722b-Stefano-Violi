@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var anni = promt('quanti anni hai');
+        console.log(anni > 18) //true se è almeno 18
+        console.log(anni >= 18) //true se è almeno 18
+        console.log(anni < 18)//true se è meno 18
+        console.log(anni <= 18)//true se è 18 o meno
+        console.log(anni != 18)//true se è diverso da  18
+        console.log(anni == 18)//true se è uguale 18
+
+        var condizione = false;
+        if(condizione){
+            alert('si')
+        }else{   /*SE --- ALTRIMENTI */
+            alert('no')
+        }
+
+        if(anni >= 18 && anni <110){
+            document.write('sei maggiorenne, puoi visitare il sito')
+        }else if(anni >= 110){
+            document.write('sei antico, ma puoi visitare comunque il sito')
+        }
+        else{
+            location.href = 'https://www.google.it'
+        }
+
+
+    </script>
+</body>
+</html>
