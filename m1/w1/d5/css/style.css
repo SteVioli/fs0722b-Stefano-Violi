@@ -84,7 +84,9 @@ header{
 ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
                                                 
 */
-
+#logow{
+    max-width: 36%;
+}
 .backh1{
     background-image: url(../images/banner.jpg);
     background-position: center;
