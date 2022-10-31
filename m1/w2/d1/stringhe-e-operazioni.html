@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringhe</title>
+</head>
+<body>
+    
+<script>
+
+var stringa1 = 'Ciao';
+var stringa2 = "Ciao";
+
+
+document.write('<div class="testo-rosso">Ecco l\'html</div>')
+document.write("<div class=\"testo-rosso\">Div creato</div>")
+document.write(`<div class="testo-rosso">Ecco l'html</div>`) /* alt +96 */
+
+/*CONCATENAMENTO*/
+var nome = 'Mario';
+var saluto = 'Benvenuto';
+
+document.write(saluto + ' ' + nome + ', come stai? <br>') 
+
+
+/* operazioni matematiche */
+document.write(`${saluto} ${nome}, Come stai?`);
+
+console.log(4 + 3) //=> 7
+console.log(4 * 3) //=> 12
+console.log(4 / 3)
+console.log(4 - 3)
+
+
+/* operazioni miste */
+
+
+var numero = 5;
+var numeroStringa = '5' //non è un numero ma una stringa
+
+console.log(numero + numeroStringa);// il numero viene convertito in stringa
+console.log(numero * numeroStringa);// la stringa viene convertita in numero ed avviene la moltiplicazione e può avvenire solo se nella stringa c'è un numero, altrimenti è NaN
+
+console.log(numero * '5a'); //=> NaN
+
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>

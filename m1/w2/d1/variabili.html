@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabili</title>
+</head>
+<body>
+    <script>
+        //questo è un commento ad una sola riga
+        /*
+        questo commento può essere disposto 
+        su più righe
+        */
+
+
+        /*di base il var è un contenitore di dati che indicano al browser una variabile */
+
+        /*dopo var il nome della variabile tutto attaccato con la seconda parola in Maiuscolo , gli unici simboli disponibili sono solo _ e $ */
+        /* niente spazi */
+        var nomeVariabile;// valore UNDEFINED cioè contiene non ha un valore variabile inizializzata e NON valorizzata
+        
+        console.log(nomeVariabile);//=> undefined
+        //console.log(pippo) is not defined
+
+        var x = 1;//=> variabile inizializzata e valorizzata
+        console.log(x);
+
+        x = 2 //prima valeva 1 ora vale 2 e non serve riscrivere VAR!!!!
+        console.log(x);
+
+
+        /*
+        TIPI DI DATO
+        */
+
+        var numero = 5; //variabile numerica
+        var stringa = 'Ciao' //i testi vanno messi tra apici o virgolette, così javascript riconosce il testo. questa è una variabile testuale=>stringa
+        var booleano = true;//variabile booleana (true o false)
+        var array = [1,5,8,0,'Ciao',[]] //è un contenitore di valori (è una lista di valori come numeri testi booleani) SONO TRA PARENTESI QUADRE, i valori sono separati da virgole
+        var oggetto = {
+            nome:"Manuel",
+            cognome:"Ferrucci"
+        }// gran parte delle volte dentro le graffe , anche qui sono liste ma sono coppie di valori separate con una virgola e solo all'interno dell oggetto sono indicati dopo i : all'interno di un oggetto altrimenti sarebbe stato l'uguale se fosse fuori
+        console.log(oggetto.nome)
+        //JAVASCRIPT CAPISCE IN AUTOMATICO IN BASE ALLE SINTASSI COME VENGONO SCRITTE DI COSA SI STA PARLANDO è tipizzazione debole!!! domanda teoria
+
+        /* attenzione il tipo di dato può essere cambiato! */
+        console.log(typeof numero)
+        numero = 'ciao'
+        console.log(typeof numero)
+
+
+    </script>
+    
+</body>
+</html>
