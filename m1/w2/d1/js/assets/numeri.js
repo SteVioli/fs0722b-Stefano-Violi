@@ -1,4 +1,4 @@
-var anni = prompt(Number'anni')
+var anni = prompt('anni')
         console.log(anni > 30) //true se è almeno 30
         console.log(anni >= 30) //true se è almeno 30
         console.log(anni < 30)//true se è meno 30
