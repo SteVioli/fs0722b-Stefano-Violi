@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var a = 0;// con le graffe si parla di BLOCCO, cioè un contesto separato la variabile var ignora sempre il blockscope
+        {
+            var b = 1;
+            console.log(a)
+        }
+        console.log(b);
+
+        //le variabili let sono soggette al blockscope
+        let c = 2 //questa let è globale, perchè non all'interno di un blocco.Quindi sarà raggiungibile dai blocchi successivi
+        {
+            let d = 3 //questa let nasce in un blocco, è utilizzabile solo all'interno del blocco
+            console.log(c);
+        }
+        
+        //console.log(d) da che d non è definita perchè non esiste al di fuori di un blocco
+
+        {
+            let d = 4;
+            console.log(d)
+        }
+
+        let f;//l'inizializzazione in questo caso determina uno scope globale, ed essendo globale è accessibile a tutti i blocchi di dati
+        {
+            {
+                f = 5
+            }
+        }
+        console.log(f)
+
+        var test = 6;
+        {   
+            //console.log(test) Cannot access 'test' before initialization
+            let test = 7
+            console.log(test)
+        }
+        
+        //scope delle funzioni
+        var t = 9;
+        function prova(){
+            console.log(t)
+            var h = 8;
+        }
+        //console.log(h) h is not defined
+
+        //CONST contenitori di dati come altri ma COSTANTI, NON POSSO RIASSEGNARLI!!!
+
+        const NOME_COSTANTE = 'prova'; //buona pratica scriverlo in maiuscolo
+        //NOME_COSTANTE = 'pippo' Assignment to constant variable.
+        console.log(NOME_COSTANTE)
+
+        const OGGETTO = {
+            nome: 'Mario'
+        }
+        //object.freeze(OGGETTO) blocca definitivamente 
+        OGGETTO.nome = 'Roberta'
+        console.log(OGGETTO.nome)//il puntino significa che quello a sinistra è un oggetto
+
+        //utilizzare CONST migliora la leggibilità al tuo codice, dai un valore semantico a quello che hai fatto
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
