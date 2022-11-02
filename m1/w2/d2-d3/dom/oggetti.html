@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let obj = {
+            proprietà:'valore'
+        }
+
+        let margherita = {
+            gusto:'margherita',
+            prezzo: 5,
+            aggiunte: [
+                {
+                    nome:'mozzarella',
+                    prezzo: 1
+                },
+                {
+                    nome:'doppia pasta',
+                    prezzo: 1 
+                },
+                {
+                    nome:'mozzarella di bufala',
+                    prezzo: 1
+                },
+            ],
+            mostraPrezzo: function(){//metodo p una funzione che appartiene ad un oggetto
+                console.log('il prezzo della pizza margherita è pari a 5euro')
+            }
+        }
+
+        console.log(margherita.prezzo)//a sinistra rimane l oggetto che voglio e a dx la proprietà che mi interessa
+        console.log(margherita.aggiunte[2].prezzo)
+        margherita.mostraPrezzo()
+
+        
+
+    </script>
+
+
+
+</body>
+</html>
