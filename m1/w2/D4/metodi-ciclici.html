@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let numeri = [10,20,800,60,233];
+
+        let numerix2 = numeri.map(function(n){
+            return n * 2
+        })
+        console.log(numerix2)
+
+        let animali = ['Tigre','Leone','Gatto','Cane','Piccione'];
+        let animaliBold = animali.map(function(a){
+            return `<b>${a}</b>`
+              //puoi anche fare return a.toUppercase
+        })
+        console.log(animaliBold)  
+
+        animaliBold.forEach(function(a){
+            document.write(a)
+        })
+
+        document.write('<hr>')
+
+        let utenti = [
+            {
+                id:1,
+                nome:'Mario',
+                cognome:'Rossi',
+                anni:30
+            },
+            {
+                id:2,
+                nome:'Riccardo',
+                cognome:'Damiani',
+                anni:25
+            },
+            {
+                id:3,
+                nome:'Stefano',
+                cognome:'Gavioli',
+                anni:21
+            },
+            {
+                id:4,
+                nome:'Dino',
+                cognome:'Iacono',
+                anni:22
+            },
+        ]
+
+        let utenteTrovato = utenti.find(function(u){
+            return u.id == 3
+        })
+
+        console.log(utenteTrovato)
+
+        
+        let utenteTrovati = utenti.filter(function(u){
+            return u.anni > 21
+        })
+        
+        console.log(utenteTrovati)
+
+
+
+    </script>
+    
+</body>
+</html>
