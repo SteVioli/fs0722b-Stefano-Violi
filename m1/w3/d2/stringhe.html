@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    let stringa = 'ggg,jjj,ooo,GGG,ppp,gGg'
+    let str1 = stringa.replace(/,/g,'.');//leva la PRIMA virgola con un puntino se metti (/,/,'.') le 2 slash e la g dal primo varole cambia tutto le 2 slash indicano cosa cerchi e la g è x dire tutte
+
+    let str2 = stringa.replace(/ggg/gi,'###');
+    //con la i dopo //g vai a indicare tutte quei valori che siano case sensitive, in questo caso leva tutte le g, a prescindere dal minuscolo e dal maiuscolo
+
+    // i = insensitive  g = global
+
+    //trim() ti leva gli spazi vuoti di una stringa
+
+    //charAt() indica un carattere relativo ad una posizione indicata
+
+
+    document.write(str1);
+    document.write( ' <br> ');
+    document.write(str2);
+
+    //split mi crea un array a partire da una stringa
+
+    console.log(stringa.split('j'))
+    console.log(stringa.split(',').join('#'))//spezzo la stringa in corrispondenza delle virgole, creando un array, poi riunisco gli elementi dell'array in una stringa usando il simbolo # come separatore
+
+    //splice() si può utilizzare con 2 paramentri per fare una eliminazione, con 3 fa una sostituzione
+
+</script>
+</html>

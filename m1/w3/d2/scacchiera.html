@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #scacchiera{
+            width: 450px;
+            height: 450px;
+           
+        }
+
+        .casella{
+            height: calc(100% /8 - 2px);
+            width: calc(100% / 8 - 2px);
+            border: 1px solid black;
+            display: inline-block;
+            margin-left: -0.1rem;
+            margin-bottom:-0.1rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="scacchiera"></div>
+
+
+
+</body>
+
+<script>
+                                                                 
+let scacchiera =document.querySelector('#scacchiera');
+//questo è un oggetto del DOM
+
+for(let i = 0 ; i < 8; i++){//con questo creo un ciclo x8
+    
+     for(let j = 0; j < 8 ; j++){
+        let colore = (i + j) %2 ? '#000' : '#fff';//if e else
+       
+        let div = document.createElement('div');//<div></div> crea l'elemento ma non lo fa apparire da nessuna parte (rimane in memoria) non appare finchè non lo dico io
+
+
+        div.classList.add('casella')//accedi alla lista di classi e a questa aggiungi casella
+        div.style.backgroundColor = colore
+
+
+        scacchiera.append(div)//prendi il div creato precedentemente e mettilo dentro la scacchiera
+       
+        // scacchiera.innerHTML += `<div class="casella" style="background-color:${colore}">${i} - ${j}</div>`;
+    }
+    //si utlizzano dei cicli per ripetere operazioni che vanno ripetute
+}
+
+
+
+
+
+</script>
+</html>

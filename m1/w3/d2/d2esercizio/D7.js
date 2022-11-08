@@ -3,9 +3,30 @@
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
 
+  /*function nome(f,g){
+    let str1 = f.slice(0,2) + g.slice(-3);
+    let str2 = str1.toUpperCase();
+    return str2;
+  }
+  console.log(nome('Andrea','Tommaso'))*/
+  /*concatenata('Giulio','Massimo')
+  const concatenata = function(str1,str2){
+    let partials = str1.slice(0,2) + str2.slice(str2.length-3)
+    let finalString = partials.toUpperCase();
+    console.log(finalString)
+  }*/
+
 /* ESERCIZIO 2
   Scrivi una funzione per creare un array di soli valori DISPARI da 1 a 100.
  */
+
+/* let arr = [];
+ for(let i = 0 ; i < 100 ; i++){
+  if( i % 2 !=  0)(
+    arr.push (i)
+  );
+ }
+ console.log(arr)*/
 
 /* ESERCIZIO 3
   Scrivi una funzione per creare un array di soli valori multipli di 5, da 1 a 100.
@@ -39,6 +60,30 @@
 /* ESERCIZIO 10 (EXTRA)
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.
  */
+
+  const createRandomWithoutDuplicate = function (){ // funzione dichiarata
+
+    let array = []                                                                  // creato array vuoto
+    
+    for (let i = 0; i < 10; i++) {                                         // ciclo for x scorrere elemento
+    
+        let added = false                                                            // valore booleano per rimanere nel ciclo while, nel    caso in cui IF venga verificato
+        while(!added){                                                               // condizione che fa ripetere il ciclo finché non viene inserito un elemento.
+          let numberToAdd = Math.ceil(Math.random()* 10)                            // in questo passaggio gli viene inserita una variabile random tra 1 e 100.
+          if (!array.includes(numberToAdd)) {                                        // controlla se nell'array non è presente il numero appena inserito nella variabile.
+            array.push(numberToAdd)                                                  // se non presente, va ad eseguire un push del numero generato
+            added = true                                                             // in questo modo esce dal ciclo quando un elemento viene aggiunto all'array e va a ripere il ciclo for.
+          }
+        }
+    
+    }
+    
+    return array
+    
+    } 
+    
+    console.log(createRandomWithoutDuplicate())
+
 
 /* ESERCIZIO 11 (EXTRA)
   Scrivi un algoritmo in grado di invertire un array.
