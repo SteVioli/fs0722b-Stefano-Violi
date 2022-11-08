@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #orologio{
+            position: relative;
+            left: 100px;
+            top:100px;
+        }
+        .lancetta{
+            width: 50px;
+            position: absolute;
+            transform-origin: left;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- DATE all'interno ha tante funzionalità per poter lavorare con le date -->
+    <!-- Breve intro perchè è immenso, importante sapere a cosa serve e in quali casi utilizzarlo (es. ogni volta che hai a che fare con delle date , utilizza DATE) -->
+    <!-- Con new Date hai la data precisa che ti da il tuo browser -->
+
+    <!-- con GET ottieni informazioni! esempio getYear getMonth,
+    con SET la imposti ... setYear , setMonth -->
+
+    <!-- OROLOGIO CHE SI AGGIORNA -->
+    <div id="time"></div>
+    <div id="orologio">
+        <hr class="lancetta">
+    </div>
+
+
+    <script>
+
+        let now = new Date();//creerà un oggetto basandosi sulle info create dalla classe date
+        let anno = now.getFullYear();
+        let month = now.getMonth() // vengono conteggiati come array, partendo dallo 0
+        let giornoSettimana = now.getDay();//domenica primo giorno della settimana con indice 0 , ci serve per ottenere il giorno della settimana sotto forma di numero
+
+        let giornoMese = now.getDate();//ti da il giorno indicato nella data
+        let orario = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+
+
+        let passato = new Date('2/2/2022 22:22:22');
+
+        if(passato < now){
+            console.log('ok')
+            console.log(passato.getTime(), now.getTime());
+        } //se la variabile passato contiene una variabile precedente a now allora "ok" , la seconda è un confronto di millesecondi dal 1970
+
+        console.log(anno,month,giornoSettimana, giornoMese , orario);
+
+        setInterval(function(){
+
+            let time = new Date();
+            document.getElementById('time').textContent = time.toLocaleTimeString()
+            //time.toLocaleTimeString()
+
+
+            //esperimento della lancetta [LO HA CHIESTO SILVIO]
+            let lancetta = document.querySelector('#orologio .lancetta')
+            lancetta.style.transform = `rotate(${time.getSeconds() *6}deg)`
+
+        }, 1000);//fa una callback ogni n millesecondi//
+
+
+        let lancetta = document.querySelector('#orologio .lancetta')
+
+
+        console.log(now.toLocaleTimeString());
+        console.log(now.toLocaleDateString());
+
+
+        let options = {
+            weekday:'long', //lunedi
+            year:'numeric', //2022
+            month:'long',   //novembre
+            day:'numeric', //7
+        }
+        let dataFormattata = now.toLocaleDateString('it-IT', options)//en-EN ti sceglie come e in che ordine mettere la data , in questo caso è in italiano
+        console.log(dataFormattata)
+
+
+        
+
+
+
+
+    </script>
+
+
+    <!-- MATH metodo con tante funzionalità per fare calcoli matematici -->
+    
+</body>
+</html>

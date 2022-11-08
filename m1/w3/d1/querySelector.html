@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test">testo id</div>
+    <div class="giallo">testo class</div>
+    <div class="giallo">testo class</div>
+    <div class="giallo">testo class</div>
+    <div class="giallo">testo class</div>
+    <div>Testo tag</div>
+    
+
+
+    <script>
+
+       let test = document.querySelector('#test')
+       console.dir(test)//hai la sicurezza di vedere l'oggetto come è fatto.. riconsegna solo un elemento, sempre e solo il primo
+        
+        test.style.color = 'red'
+
+       let giallo = document.querySelectorAll('.giallo')// te li indica tutti gli elementi con quella classe
+        console.log(giallo)
+
+        let div = document.querySelectorAll('div')//tutti gli elementi div
+        for(let elemento of giallo){
+            elemento.style.backgroundColor = 'yellow';
+        }
+        
+    </script>
+    
+</body>
+</html>
