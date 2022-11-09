@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function Persona(_nome,_cognome){
+
+                this.nome = _nome;
+                this.cognome = _cognome;
+                this.presentazione = function(){//è un metodo
+                    console.log(`Ciao,mi chiamo ${this.nome} ${this.cognome}`)
+                } // mettendo il this.nome e this.cognome conterranno tutti i nomi e cognomi anche se vengono aggiornati come a riga 27
+                  // senza il this prende spunto dal nome e cognome della funzione Persona(nome,cognome)  
+                  // devo puntare alle proprietà usando this, così anche se il dato viene aggiornato avrò sempre un riferimento preciso  
+                }     
+
+                let mario = new Persona('Mario','Rossi');
+                console.log(mario)
+                mario.nome = 'Pippo'
+                mario.presentazione()
+
+                //posso modificare le proprietà dopo la creazione dell'oggetto
+                let andrea = new Persona();
+                andrea.nome = 'Andrea';
+                andrea.cognome ='Ancona';
+                console.log(andrea)
+                andrea.presentazione();
+
+
+                Persona.prototype.anni = null;//aggiungo una proprietà con valore zero
+                
+                andrea.anni = 30;
+                console.log(andrea)
+   
+</script>
+
+</body>
+
+</html>
