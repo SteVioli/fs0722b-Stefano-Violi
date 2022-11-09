@@ -8,8 +8,32 @@
 </head>
 <body>
 
+    <div id="testo"></div>
+
     <script>
 
+        function aggiungiTesto(text , fn){
+            let testo = document.getElementById("testo");
+            testo.innerHTML += fn(text)
+        }
+
+        aggiungiTesto('Ciao' , testoBold);
+        aggiungiTesto('<br>Ciao' , testoItalic);
+        aggiungiTesto('<br>Ciao come va',(text)=>text.toUpperCase());
+        aggiungiTesto('<br>Testo non trasformato',(text)=>text);
+
+
+        function testoBold(text){
+            return `<b>${text}</b>`
+
+        }
+
+        function testoItalic(text){
+            return `<i>${text}</i>`
+
+        }
+
+        
         
     </script>
     

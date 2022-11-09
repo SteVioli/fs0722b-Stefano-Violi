@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="dati"></div>
+
+    <script>
+        //restituisce una promise quindi per leggere i risultati serve la callback dentro a THEN
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then((response)=>response.json())//richiede che response sia trasformato nel contenuto/dati della pagina 
+            .then((utenti)=>{
+                console.log(utenti) 
+
+                let dati = document.getElementById('dati')
+                for(let u of utenti){
+                    dati.innerHTML += u.name+'<br>'
+                }
+          
+            
+            })
+
+        /*function Fetch(){
+            return new Promise((resolve, reject) => {
+                
+            })
+        }*/
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+        let p = new Promise(function(successo, errore){//successo ed errore sono due funzioni di callback che serviranno a restituire
+            let password = 'passwords';
+            if(password == 'password'){
+                successo('accesso consentito');//eseguo la prima callback di then
+            }else{
+                errore('errore nella richiesta');//eseguo la seconda callback di then
+            }
+        })
+
+        //è un metodo che si può unire a qualunque elemento contenga una promise, riuscirà a gestire il dato ricevuto
+        p.then(
+            (risultato)=>console.log(risultato),//primo evento scatenato (false)
+            (errore)=>console.log(errore)//se non parte il primo parte il secondo (false)
+        )
+
+
+        //promise con solo successo
+
+        let promise = new Promise(function(successo){
+            setTimeout(function(){
+                successo('fatto');
+            },3000) //questa dopo 3 secondi o 3000 millisecondi
+        })
+
+        promise.then((data)=>console.log(data))//THEN è un metodo per gestire un dato gestito dalla promise
+        console.log(1) //è una riga sincrona, viene eseguita per prima
+
+
+    </script>
+    
+</body>
+</html>
