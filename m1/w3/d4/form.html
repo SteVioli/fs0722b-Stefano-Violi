@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:not(input[type="submit"]){
+            padding: 15px 30px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"]{
+            background-color: green;
+            color: white;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="myForm">
+
+        <div>
+            <input type="text" id="nome" placeholder="Nome" >
+            <span></span>
+        </div>
+        <div>
+            <input type="text" id="cognome" placeholder="Cognome" >
+            <span></span>
+
+        </div>
+        <div>
+            <input type="email" id="email" placeholder="Email" >
+            <span></span>
+
+        </div>
+        <div>
+            <input type="password" id="password" placeholder="Password" >
+            <span></span>
+        </div>
+
+        <button type="button">mostra/nascondi</button>
+        
+        <input type="submit" id="invia">
+
+
+    </form>
+
+    <script>
+
+        let formBtn = document.getElementById("invia");
+        
+        formBtn.addEventListener('click',function(e){
+            e.preventDefault();//blocca funzionalità default
+            let valid = true;//variabile di controllo che mi serve come puoi passare oppure no
+
+            let nome = document.getElementById('nome')
+            let cognome = document.getElementById('cognome')
+            let email = document.getElementById('email')
+            let passoword = document.getElementById('passoword')
+
+
+            if(!nome.value){//se nome == "";
+                nome.nextElementSibling.textContent = 'Devi inserire il nome'
+                valid = false
+            }else{
+                nome.nextElementSibling.textContent ='';
+            }
+            if(!cognome.value){//se cognome == "";
+                cognome.nextElementSibling.textContent = 'Devi inserire il cognome'
+                valid = false
+            }else{
+                cognome.nextElementSibling.textContent ='';
+            }
+            if(!email.value){//se email == "";
+                email.nextElementSibling.textContent = 'Devi inserire l\ email'
+                valid = false
+            }else{
+                email.nextElementSibling.textContent ='';
+            }
+            if(!password.value){//se password == "";
+                password.nextElementSibling.textContent = 'Devi inserire il password'
+                valid = false
+            }else{
+                password.nextElementSibling.textContent ='';
+            }
+
+
+
+            if(valid){
+                console.log('form inviato')
+                //form.submit()
+            }
+        })
+
+
+
+        /*
+        mappare i tasti
+        document.querySelector('#nome').addEventListener('keydown',function(e){
+            console.log(e)
+
+            if(e.key == 'w'){
+                //spostati avanti
+            }
+            
+            if(e.key == 'a'){
+                //spostati a sinistra
+            }
+            if(e.key == 's'){
+                //spostati indietro
+            }
+            if(e.key == 'd'){
+                //spostati a destra
+            }
+            
+        });
+        */
+
+    </script>
+</body>
+</html>
