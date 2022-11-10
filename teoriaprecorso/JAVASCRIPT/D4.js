@@ -105,30 +105,98 @@ const starWarsCharacters = [
 Crea una variabile chiamata "characters" e inserisci un array vuoto
 */
 
+var characters = [];
+
 /* ESERCIZIO 2
 Usando un for loop, cicla l'array "starWarsCharacters" ed accedi alla proprietà "name". 
 Usa il valore contenuto inserendolo nell'array creato precedentemente. 
 Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
+for ( let i = 0 ; i < starWarsCharacters.length ; i++){
+    let name = starWarsCharacters[i].name;
+    characters.push(name)    
+    
+}
+console.log(characters)
 
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un array chiamato "femaleCharacters" e inserisci un oggetto con questa struttura: 
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
 */
 
+var femaleCharacters = [];
+  let x = {
+    name: 'Leia Organa',
+    hair_color: 'brown',
+    eye_color: 'brown'
+  }
+  femaleCharacters.push(x)
+  console.log(femaleCharacters)
+
+
+
+
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
   ognuna di queste proprietà contiene un array vuoto
 */
 
+var eyeColor = {
+  blue: [],
+  yellow:[],
+  brown:[],
+  red:[],
+  blue_gray:[]
+}
+
+
 /* ESERCIZIO 5
   Inserisci l'oggetto dei personaggi in "starWarsCharacters" nell'array corrispondente al colore dei loro occhi nell'oggetto "eyeColor" precedentemente creato
   Utilizza uno switch statement per determinare in quale proprietà inserire il personaggio
   */
+ 
+  
+  for(let i = 0 ; i < starWarsCharacters.length ; i++){ //faccio un ciclo per la lunghezza dell'array
+    let c = starWarsCharacters[i] //creo una variabile che mi serve per contenere gli indici della costante 
+      switch (c.eye_color) { //utilizzo SWITCH e tra parentesi metto la variabile creata nelle graffe.la proprietà che avevo creato nell'oggetto di prima
+        case "blue": //poi gli dico che nel CASE in cui incontri il valore "blue"
+          eyeColor.blue.push(c) // gli inserisca prendendo dalla variabile eyecolor, la proprietà blue ( che ha un array vuoto dentro) e gli pusho dentro la variabile c
+          break //interrompo il case
+        case "yellow": //riprendo per tutti i colori di eyeColor
+          eyeColor.yellow.push(c)
+          break
+        case "brown":
+          eyeColor.brown.push(c)
+          break
+        case "red":
+          eyeColor.red.push(c)
+          break
+        case "bluegray":
+          eyeColor.blue_gray.push(c)
+          break
+        default:
+          break;
+        }
+    }
+    console.log(starWarsCharacters)
+
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio
   */
+
+  let somm = 0;
+function es6(){
+      let j = 0;  
+      while (j < starWarsCharacters.length){
+        somm += parseInt(starWarsCharacters[j].mass);
+        j++
+      }
+      console.log('la massa è di = ' + somm)
+      }
+      
+es6()
+
 
 /* ESERCIZIO 7
 

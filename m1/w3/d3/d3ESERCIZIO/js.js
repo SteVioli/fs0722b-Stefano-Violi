@@ -30,7 +30,7 @@ cerca.addEventListener('keyup', ()=> {
     let end = document.querySelectorAll('#testo1');
 
     console.log(end)
-
+    
 
 })
 
