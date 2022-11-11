@@ -195,7 +195,7 @@ function es6(){
       }
       console.log(somm)
       }
-
+es6()
 /* ESERCIZIO 7
 
 Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
