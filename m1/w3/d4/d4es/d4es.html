@@ -101,11 +101,14 @@
       */
 
       const addToTheSecond = function (content) {
-        
-        //
+        let a = document.querySelector('#secondList');
+        let b = document.createElement('li')
+        b.innerHTML = content;
+        a.appendChild(b)
+
       }
 
-      addToTheSecond()
+      addToTheSecond("nuovo elemento aggiunto alla seconda lista")
 
       /* ESERCIZIO 6
        Scrivi una funzione per aggiungere un secondo paragrafo al primo div.
