@@ -1,4 +1,5 @@
 /* IMPOSTAZIONI GENERALI */
+@media screen and (min-width:320px){
 html {font-size: 62.5%;}
 body { 
     font-family: Poppins, 'Helvetica Neue', sans-serif;
@@ -12,6 +13,7 @@ body {
 hr {display: none;} /* rimuove l'elemento */
 
 /* HEADER */
+
 header {
     background: rgb(0,160,198);
     background: linear-gradient(180deg, rgba(0,160,198,1) 0%, rgba(3,109,134,1) 68%);
@@ -32,6 +34,8 @@ header nav ul {
 header nav li {
     list-style: none;
 }
+
+
 header nav li a {
     color: white;
     text-decoration: none;
@@ -177,4 +181,117 @@ footer {
 }
 footer a {
     color: fuchsia;
+}
+}
+@media only screen and (min-width:768px) {
+    header li{
+        display:inline
+        
+    }
+    main table{
+        margin-left:27%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    input{
+        padding-right: 300px;
+    }
+    aside div{
+        background: none;
+        border: none;
+    }
+    #correlati div{
+        background-color:#e3e3e3;
+        border: 0.1px solid #c3c3c3;
+    }
+    footer{
+        font-size:larger;
+    }
+}
+
+
+@media only screen and (min-width:1200px){
+    body{
+        background-size: 400px;
+        background-repeat:repeat;
+        padding: 0px;
+        margin: 10px 60px 10px 60px;
+    }
+    header{ 
+            display:flex;
+            flex-direction: row;
+            justify-content:flex-start;
+            padding: 0px;
+            height: 75px;
+        }
+    header img{
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        }
+    header p{
+        margin-left: 10px;
+        margin-top: 28px;
+
+       }
+    header nav{
+        margin-top: 28px;
+        margin-left: 380px;
+    }   
+    header div,nav ul{
+            display: flex;
+            justify-content: space-between;
+          }
+    main table{
+        width: 700px;
+        margin-left: 17%;
+    }
+    iframe{
+        width: 600px;
+    }
+    input{
+        width: 420px;
+    }
+    #desktop{
+        display: flex;
+    }
+    #correlati{
+       display: flex;
+    }
+    #correlati div{
+        width: 400px;
+        background-color:#e3e3e3;
+        border: 0.1px solid #c3c3c3;
+    }
+    aside div{
+        background: none;
+        border: 0px;
+        margin: 0px;
+    }
+    address{
+        margin-left: 200px;
+        width: 650px;
+    }
+        
+  
+}
+
+
+@media print {
+    body{background:none;
+    border: none;
+box-shadow: none;}
+    header,div, img,strong,iframe,section,form,aside,footer{display: none;
+    border:none;
+box-shadow: none;} 
+main{
+    box-shadow:none;
+}
+code{
+    border: none;
+}
+i{
+    display: none;
+}
 }
