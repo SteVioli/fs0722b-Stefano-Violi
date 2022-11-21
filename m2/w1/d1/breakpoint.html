@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, initial-scale=1.0, minimum-scale=0.9, maximum-scale=1.1">
+    <!--
+        la proprietà INITIAL SCALE imposta il fattore di zoom iniziale (quando la pagina viene caricata) 
+        la proprietà USER-SCALABLE permette di consentire o meno all'utente di ridimensionare/zoomare la pagina
+        con MINIMUM-SCALE e MAXIMUM-SCALE posso stabilite quanto l'utente può zoomare
+
+        VIEWPORT 
+        https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html
+        http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/
+    -->
+    <title>Media queries</title>
+    <style type="text/css">
+        body{
+            background: red;
+        }  
+                                           /*MOBILE FIRST*/  
+        @media screen and (min-width:480px){ /*questo è un breakpoint*/
+            body{                           /*SMARTPHONE LANDSCAPE*/
+                background: yellow;
+            }
+        }
+        @media screen and (min-width:768px) {/*TABLET*/
+            body{
+                background: green;
+            }
+        }
+        @media screen and (min-width:1024px) { /*LAPTOP*/
+            body{
+                background: blue;
+            }
+        }
+        @media screen and (min-width:1200px){ /*DESKTOP*/
+            body{
+                background: grey;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- MEDIA QUERIES -->
+
+        
+
+
+
+</body>
+</html>
