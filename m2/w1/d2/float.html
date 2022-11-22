@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOAT</title>
+    <style>
+        body {
+            margin: 0px;
+            /* VERIFICARE CONTINUAMENTE CON L INSPECT PER VEDERE QUALI PROPRIETA' MI DANNO FASTIDIO e DOPO CAMBIO*/
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            /* margine distanza esterna tra contenitore, se inserisco 2 valori il primo è top/bot il secondo right/left, con auto il contenitore si centra*/
+            /*padding distanza tra contenitore e contenuto*/
+            border: 1px solid black;
+            /*utile utilizzare sempre i border per definire bene i nostri contenitori*/
+        }
+
+        header {
+            background-color: navy;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0;
+            /*perchè di default crea uno spazio da h1 al contenitore*/
+            font-weight: 400;
+        }
+
+        nav {
+            background-color: blueviolet;
+            height: 30px;
+            /*con Float devo dichiarare un altezza per vedere gli elementi che hanno il FLOAT*/
+        }
+
+        nav ul {
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            /*Leva i pallini dalle liste*/
+        }
+
+        nav li {
+            float: left;
+            /*Float rompe la caratteristica di display;block e fa fluttuare gli elementi a sx e a dx
+            i tag a cui assegnamo float non hanno altezza (non contribuiscono all'altezza del contenitore!!) ci sono ma non li vedo*/
+            /*display: inline; Mette in Orizzontale il nostro menu nav che in questo caso tiene una lista*/
+            border-right: 1px solid white;
+            /*width: 200px; INLINE NON ACCETTA WIDTH, DOVREI UTILIZZARE INLINE BLOCK */
+            padding: 0 80px;
+        }
+
+        nav li#ultimo {
+            border-right: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            line-height: 30px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: blueviolet;
+        }
+
+        /*Main*/
+        main { padding: 15px;}
+        section {margin-left: 300px; margin-right: 300px;}
+        aside {
+            float: left;
+            width: 300px;
+        }
+
+        #right {
+            float: right;
+            /*gli elementi FLOAT precedono SEMPRE gli elementi liberi*/
+            width: 300px;
+        }
+        article img {width: 100px;}
+        article p {text-align: justify;}
+        .sx {float:left}
+        .dx {float: right;}
+
+        /*footer*/
+        footer {
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            clear: both;
+            /* con questa proprietà il footer si posiziona sotto, "fregandosene del float dato ad aside, in questo caso andava bene anche solo clear left perchè il float è a sinistra*/
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FLOAT nasce come sistema per affiancare elementi ( esempio affiancare come paragrafi )
+     lo utilizzo per impaginare un layout-->
+    <div class="container">
+        <!-- Intestazione -->
+        <header>
+            <h1>Epicode</h1>
+            <!--cercare di mantenere lo stesso ordine tra HTML e CSS per facilitare il lavoro e la ricerca degli elementi -->
+            <nav>
+                <ul>
+                    <li><a href="#">Html</a></li>
+                    <li><a href="#">Css</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Typescrit</a></li>
+                    <li id="ultimo"><a href="#">Angular</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Corpo Centrale -->
+        <main>
+            <aside>
+                <img src="../d1/images/img_orange_flowers.jpeg" alt=""><br>
+                <img src="../d1/images/img_pink_flowers.jpeg" width="100px" alt="">
+            </aside>
+            <aside id="right">
+                <img src="../d1/images/img_orange_flowers.jpeg" alt=""><br>
+                <img src="../d1/images/img_pink_flowers.jpeg" width="100px" alt="">
+            </aside>
+            <section>
+                <article>
+                    <img src="../d1/images/img_orange_flowers.jpeg" alt="" class="sx"><br>
+                    <p>Croissant tootsie roll dragée chupa chups jelly cotton candy jujubes cheesecake jujubes. Caramels tootsie roll oat cake cheesecake gummies ice cream wafer bear claw. Liquorice chocolate bar tiramisu oat cake jelly-o. Dessert bear claw jelly tiramisu macaroon. Chocolate dragée bonbon oat cake candy ice cream liquorice croissant oat cake. Gingerbread croissant pastry chocolate bar carrot cake pudding sugar plum cookie cheesecake. Gingerbread tart topping carrot cake gingerbread lemon drops brownie chocolate bar jelly.</p>
+                </article>
+                <article>
+                    <img src="../d1/images/img_orange_flowers.jpeg" alt="" class="dx"><br>
+                    <p>Candy canes biscuit toffee cookie cotton candy jelly. Chocolate cake bonbon carrot cake sesame snaps gingerbread pie. Dragée carrot cake croissant ice cream marshmallow dessert pie. Donut sweet roll tart gingerbread sweet roll pastry croissant ice cream chocolate. Dessert fruitcake apple pie biscuit gummies lollipop. Oat cake lemon drops cheesecake gummies jelly beans lollipop. Chocolate sugar plum fruitcake tiramisu topping tootsie roll dragée. Dragée gummi bears tiramisu donut tootsie roll gingerbread icing pie.</p>                    
+            </article>
+            <article>
+                <img src="../d1/images/img_orange_flowers.jpeg" alt="" class="sx"><br>
+                <p>Candy sweet carrot cake cake bear claw. Donut fruitcake pie gummi bears powder candy shortbread cake bear claw. Icing powder candy canes topping bonbon liquorice croissant lemon drops. Lollipop cake gummies cake dessert chocolate bar toffee. Sugar plum sweet tootsie roll brownie donut cupcake toffee. Biscuit chocolate ice cream bonbon donut. Candy canes chocolate bar sweet muffin croissant soufflé marshmallow macaroon pastry.</p>
+            </article>
+            <article>
+                <img src="../d1/images/img_orange_flowers.jpeg" alt="" class="dx"><br>
+                <p>Croissant tootsie roll dragée chupa chups jelly cotton candy jujubes cheesecake jujubes. Caramels tootsie roll oat cake cheesecake gummies ice cream wafer bear claw. Liquorice chocolate bar tiramisu oat cake jelly-o. Dessert bear claw jelly tiramisu macaroon. Chocolate dragée bonbon oat cake candy ice cream liquorice croissant oat cake. Gingerbread croissant pastry chocolate bar carrot cake pudding sugar plum cookie cheesecake. Gingerbread tart topping carrot cake gingerbread lemon drops brownie chocolate bar jelly.</p>
+            </article>  
+            <article>
+                <img src="../d1/images/img_orange_flowers.jpeg" alt="" class="sx"><br>
+                <p>Candy canes biscuit toffee cookie cotton candy jelly. Chocolate cake bonbon carrot cake sesame snaps gingerbread pie. Dragée carrot cake croissant ice cream marshmallow dessert pie. Donut sweet roll tart gingerbread sweet roll pastry croissant ice cream chocolate. Dessert fruitcake apple pie biscuit gummies lollipop. Oat cake lemon drops cheesecake gummies jelly beans lollipop. Chocolate sugar plum fruitcake tiramisu topping tootsie roll dragée. Dragée gummi bears tiramisu donut tootsie roll gingerbread icing pie.</p>                 
+            </article>   
+            <article>
+                <img src="../d1/images/img_orange_flowers.jpeg" alt="" class="dx"><br>
+                <p>Candy sweet carrot cake cake bear claw. Donut fruitcake pie gummi bears powder candy shortbread cake bear claw. Icing powder candy canes topping bonbon liquorice croissant lemon drops. Lollipop cake gummies cake dessert chocolate bar toffee. Sugar plum sweet tootsie roll brownie donut cupcake toffee. Biscuit chocolate ice cream bonbon donut. Candy canes chocolate bar sweet muffin croissant soufflé marshmallow macaroon pastry.</p>
+            </article>
+            </section>
+        </main>
+        <footer>
+            <p>FOOTER</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
