@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gallery</title>
+    <style>
+        .grid{
+            display: grid;/*do al mio contenitore display grid*/
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));/*tutti quanti occupano 1 porzione di spazio*/ /*repeat fa tutto allo stesso modo. autofill dimensionati sul contenuto. 1fr mi dice che tra di loro in questo caso sono tutte grandi uguali*/
+            grid-gap: 20px;
+            align-items: stretch;
+        }
+        .grid img{
+            border: 1px solid grey;
+            box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+            max-width: 100%;/*rendo l immagine responsive*/
+        }
+    </style>
+</head>
+<body>
+    <main class="grid">
+        <img src="pix/15l.jpeg" alt="">
+        <img src="pix/16l.jpeg" alt="">
+        <img src="pix/22m.jpeg" alt="">
+        <img src="pix/23m.jpeg" alt="">
+        <img src="pix/24m.jpeg" alt="">
+        <img src="pix/25m.jpeg" alt="">
+    </main>
+</body>
+</html>
+        

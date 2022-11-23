@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .main-nav{
+            display:flex; /* Prendo il contenitore maggiore e gli do il display flex per disporre tutti i suoi contenuti in maniera flessibile*/
+            background:orangered;
+            color: white;
+            border-radius: 3px;
+            padding: 1em; /*un po di padding altrimenti verrebbe tutto appiccicato al contenitore*/
+            font-family: sans-serif;
+        }
+        /*Ora devo cambiare come si comportano gli elementi della lista*/
+        .main-nav > ul {
+            list-style-type: none;/* leva lo stile dei pallini alle liste*/
+            margin: 0;
+            padding: 0;
+            display:flex; /* perchè voglio che gli elementi di ul cioè la mia lista si allinei, si affianchino tra di loro*/
+            flex: 3; /* flex è la sintesi di grow shrink e basis, se ne metto solo uno prende grow, cioè il primo
+                     è item di main nav e gli assegno un fattore di ingrandimento  
+                     Flex grow serve per aumentare le proporzioni tra i vari elementi */
+        }
+        .main-nav li {
+            margin-right: 1em ;/*stacca di 1em tutti gli elementi lista*/
+        }
+        .main-nav form {
+            display: flex;
+            justify-content: flex-end; /*diventando parte flessibile del loro contenitore, devo mettergli flex-end in questo caso, perchè voglio che parte dalla parte in fondo*/
+            flex: 1;
+        }
+        .main-nav input{
+            flex: 1;/*va in base agli elementi dello stesso livello. in questo caso il button*/
+        }
+        .main-nav button{
+            background: white;
+            border: 0;
+            border-radius: 1em;
+            color: orangered;
+            padding: 0 1em;
+            margin-left: 0.3em;
+        }
+        @media screen and (max-width: 575px){ /*a questa risoluzione voglio fare andare tutto in formato colonna*/
+            .main-nav{
+                flex-direction: column;
+            }
+            .main-nav ul{
+                flex-direction: column;
+                margin-bottom: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <nav class="main-nav">
+        <ul>
+            <li>Logo</li>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Service</li>
+        </ul>
+        <form>
+            <input type="search" placeholder="Search">
+            <button>Go</button>
+        </form>
+    </nav>
+</body>
+</html>

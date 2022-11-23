@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Order</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex; /*visto che è il contenitore di CONTAINER gli do il flex*/
+            justify-content: center; /*centra lungo la linea x*/
+            align-items: center; /* centra lungo la linea y*/
+        }
+        #container{
+            background-color: grey;
+            border: 2px solid black;
+            display: flex; /*voglio dare il flex a tutti i div dentro a container*/
+            flex-flow: row nowrap; /*mette assieme i valori delle proprietà flex-direction e flex-wrap*/
+            align-items: center;
+            justify-content: space-around;
+        }
+        #box-1{
+            background: red;
+            border: 1px solid black;
+            /*-webkit*/order:2 /*Do l ordine di visualizzazione dei box*/
+        }
+        #box-2{
+            background: blue;
+            border: 1px solid black;
+            /*-webkit*/order:3 /*Do l ordine di visualizzazione dei box*/
+        }
+        #box-3{
+            background: green;
+            border: 1px solid black;
+            /*-webkit*/order:1; /*Do l ordine di visualizzazione dei box*/
+        }
+        #box-1,#box-2,#box-3{
+            padding: 50px; /*ingrandisco il contenuto dei vari box*/
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box-1">BOX 1</div>
+        <div id="box-2">BOX 2</div>
+        <div id="box-3">BOX 3</div>
+
+    </div>
+    
+</body>
+</html>
