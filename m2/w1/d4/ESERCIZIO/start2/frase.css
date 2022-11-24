@@ -22,14 +22,14 @@ i{
 
 .testo-1{
     animation-name: testo;
-    animation-duration: 9s; /*quanto dura*/
+    animation-duration: 15s; /*quanto dura*/
     animation-delay: 0s;    /* dopo quanto parte*/
     animation-iteration-count: infinite; /* quante volte si ripete*/
     animation-timing-function: linear;
 }
 .testo-2{
     animation-name: testo;
-    animation-duration: 12s; /*quanto dura*/
+    animation-duration: 15s; /*quanto dura*/
     animation-delay: 3s;    /* dopo quanto parte*/
     animation-iteration-count: infinite; /* quante volte si ripete*/
     animation-timing-function: linear;
@@ -40,7 +40,7 @@ i{
     position: relative;
     right: 210px;
     animation-name: testo;
-    animation-duration: 12s; /*quanto dura*/
+    animation-duration: 15s; /*quanto dura*/
     animation-delay: 6s;    /* dopo quanto parte*/
     animation-iteration-count: infinite; /* quante volte si ripete*/
     animation-timing-function: linear;
