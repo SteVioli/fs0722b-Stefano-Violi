@@ -15,40 +15,29 @@
 }
 #testoAlternato p{
     font-weight: 600;
+    position: relative;
 }
 i{
     color: green;
 }
 
 .testo-1{
-    animation-name: testo;
-    animation-duration: 15s; /*quanto dura*/
-    animation-delay: 0s;    /* dopo quanto parte*/
-    animation-iteration-count: infinite; /* quante volte si ripete*/
-    animation-timing-function: linear;
+    position: absolute;
+    animation: testo 6s linear infinite 0s;
 }
 .testo-2{
-    animation-name: testo;
-    animation-duration: 15s; /*quanto dura*/
-    animation-delay: 3s;    /* dopo quanto parte*/
-    animation-iteration-count: infinite; /* quante volte si ripete*/
-    animation-timing-function: linear;
-    position: relative;
-    right: 100px;
+    animation: testo 6s linear infinite 2s;
+    position: absolute;
 }
 .testo-3{
-    position: relative;
-    right: 210px;
-    animation-name: testo;
-    animation-duration: 15s; /*quanto dura*/
-    animation-delay: 6s;    /* dopo quanto parte*/
-    animation-iteration-count: infinite; /* quante volte si ripete*/
-    animation-timing-function: linear;
+    position: absolute;
+    animation: testo 6s linear infinite 4s;
 }
-@keyframes testo{ 
-    0%{transform: translateY(50px);opacity: 0}
-    50%{transform: translateY(0px);opacity: 1}
-    100%{transform: translateY(-50px);opacity: 0}
+@-webkit-keyframes testo {
+    0% { opacity: 0; }
+    3% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+	6% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+    100% { opacity: 0; }
 }
-
-/*avrei messo il position relative e poi copiato le stesse formattazioni date con delay differente per evitare che si sovrappongano, ma non mi prende in alcun modo il transform:translateY()*/
