@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trasformazioni</title>
+    <style>
+        div.a{
+            width: 150px;
+            height: 80px;
+            background-color: yellow;
+            transform:rotate(30deg); /* transform:rotate() mi permette di fare ruotare su stesso l'elemento di tot gradi (numero + deg)*/
+        }
+        div.b{
+            width: 150px;
+            height: 80px;
+            background-color: yellow;
+            transform: skew(20deg,20deg);/*x e y puoi utilizzare anche gradi negativi*/
+        }
+        div.c{
+            width: 150px;
+            height: 80px;
+            background-color: yellow;
+            transform:scale(0.5, 1.5); /*x e y richiede valori di grandezzi quindi niente gradi se voglio rimpicciolirlo vado da 0 a 1 come valori (1 è 100%) se troppo grande può anche uscire dal monitor*/
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transform: rotate(80deg) scale(0.7) skew(10deg,20deg); /*puoi mettere più trasformazioni assieme, tra una e l'altra utilizzare lo spazio per i valori dentro le parentesi utilizzare le virgole*/
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>La proprietà transform()</h2>
+    <h2>transform rotate</h2>
+    <div class="a">Rotate</div>
+    <h2>transform skew</h2>
+    <div class="b">Skew</div>
+    <h2>transform Scale</h2>
+    <div class="c">Scale</div>
+    <h2>Più trasformazioni assieme</h2>
+    <div id="box">trasformazioni assieme</div>
+</body>
+</html>

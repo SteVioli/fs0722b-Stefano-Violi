@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transizioni</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /*transition: width 12s;*//* gli metto transition per dirgli quanto tempo ci deve impiegare per fare l effetto in questo caso di hover*/
+            /*sono gli stessi tempi di transizione anche nel tornare alla sua forma normale... Con la KEYWORD all , prendo tutti i valori , non solo width*/
+            transition: width 4s, height 12s, border-radius 2s;
+            transition-delay: 2s;/*posso dirgli di effettuare i cambiamenti , la transizione con un ritardo . Stesse istruzioni per quando esco dalla sua trasformazione*/
+        }
+        div:hover{
+            width: 400px; /* con l hover cambio la width di div a 400px*/
+            height: 400px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>La proprietà transizione</h2>
+    <p>Con l'hover del mouse il mio div cambierà i valori di alcune o una proprietà</p>
+    <div></div>
+</body>
+</html>

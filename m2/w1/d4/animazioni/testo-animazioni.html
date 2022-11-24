@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni testo</title>
+    <style>
+        #box{
+            margin: 20px auto;
+            padding: 5px;
+            width: 400px;
+            background-color: #999;
+            border: 1px solid black;
+        }
+        #box h1{
+            margin:0;
+            padding: 5px;
+            animation-name: animazione_testo_02;  /* posso cambiare il nome dell'animazione*/
+            animation-duration: 10s; /*quanto dura*/
+            animation-delay: 2s;    /* dopo quanto parte*/
+            animation-iteration-count: 1; /* quante volte si ripete*/
+            animation-timing-function: ease; /* come si propaga*/
+        }
+        @-webkit-keyframes animazione_testo_01{ /*webkit lo fa andare su più browser*/
+            0%{opacity:0;} /*subito non c'è dopo un secondo ottiene l'opacità 1 cioè si vede*/
+            100%{opacity: 1;}
+        }
+        @-webkit-keyframes animazione_testo_02{
+            0%{transform: translate(0,0);} /*coordinate x e y di partenza*/
+            100%{transform: translate(180px,0);}
+        }
+    </style>
+</head>
+<body>
+    <div id="box"><h1>Testo di prova</h1></div>
+</body>
+</html>

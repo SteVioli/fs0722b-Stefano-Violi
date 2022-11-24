@@ -1,0 +1,54 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+#testoAlternato{
+    margin: 20px;
+    background: rgb(155, 81, 81);
+    border: 1px solid black;
+    padding: 20px;
+}
+#testoAlternato p{
+    font-weight: 600;
+}
+i{
+    color: green;
+}
+
+.testo-1{
+    animation-name: testo;
+    animation-duration: 9s; /*quanto dura*/
+    animation-delay: 0s;    /* dopo quanto parte*/
+    animation-iteration-count: infinite; /* quante volte si ripete*/
+    animation-timing-function: linear;
+}
+.testo-2{
+    animation-name: testo;
+    animation-duration: 12s; /*quanto dura*/
+    animation-delay: 3s;    /* dopo quanto parte*/
+    animation-iteration-count: infinite; /* quante volte si ripete*/
+    animation-timing-function: linear;
+    position: relative;
+    right: 100px;
+}
+.testo-3{
+    position: relative;
+    right: 210px;
+    animation-name: testo;
+    animation-duration: 12s; /*quanto dura*/
+    animation-delay: 6s;    /* dopo quanto parte*/
+    animation-iteration-count: infinite; /* quante volte si ripete*/
+    animation-timing-function: linear;
+}
+@keyframes testo{ 
+    0%{transform: translateY(50px);opacity: 0}
+    50%{transform: translateY(0px);opacity: 1}
+    100%{transform: translateY(-50px);opacity: 0}
+}
+
+/*avrei messo il position relative e poi copiato le stesse formattazioni date con delay differente per evitare che si sovrappongano, ma non mi prende in alcun modo il transform:translateY()*/

@@ -1,0 +1,93 @@
+h2{
+    font: 2rem "Indie Flower";
+}
+p{
+    font: 14px "Indie Flower";
+}
+#sfondo{
+    width: 700px;
+    margin: 0 auto;
+    background-color: rgb(69, 69, 69);
+    padding: 15px 15px 40px 15px;
+    text-align: center;
+}
+#sopra{
+    display: flex;
+    margin-left: 5px; 
+}
+#sopra div{
+    margin-left: 30px;
+}
+#sotto{
+    display: flex;
+    margin-left: 5px;
+    margin-top: 30px;
+}
+#sotto div{
+    margin-left: 30px;
+}
+.giallo{
+    background: linear-gradient(yellow,rgba(0, 0, 0, 0.241));
+    padding: 10px;
+    transform: rotate(-5deg);
+    border: 1px solid black;
+    box-shadow: 0 8px 8px -4px rgb(17, 17, 18);
+    animation-name:giallo_1;
+    animation-duration: 3s; /*quanto dura*/
+    animation-delay: 0s;    /* dopo quanto parte*/
+    animation-iteration-count: 1; /* quante volte si ripete*/
+    animation-timing-function: infinite;
+
+}
+.verde{
+    background: linear-gradient(rgb(50, 140, 62),rgba(0, 0, 0, 0.241));
+    padding: 10px;
+    transform: rotate(3deg);
+    border: 1px solid black;
+    box-shadow: 0 8px 8px -4px rgb(17, 17, 18);
+    animation-name:verde_1;
+    animation-duration: 2s; /*quanto dura*/
+    animation-delay: 0s;    /* dopo quanto parte*/
+    animation-iteration-count: 1; /* quante volte si ripete*/
+    animation-timing-function: ease-in;
+    
+}
+.viola{
+    background: linear-gradient(rgb(100, 47, 166),rgba(0, 0, 0, 0.241));
+    padding: 10px;
+    transform: rotate(-8deg);
+    border: 1px solid black;
+    box-shadow: 0 8px 8px -4px rgb(17, 17, 18);
+    animation-name:viola_1;
+    animation-duration: 4s; /*quanto dura*/
+    animation-delay: 0s;    /* dopo quanto parte*/
+    animation-iteration-count: 1; /* quante volte si ripete*/
+    animation-timing-function: ease-in;
+
+}
+.giallo:hover{
+    transform:scale(1.2) rotate(0deg);
+}
+.verde:hover{
+    transform:scale(1.2) rotate(0deg);
+}
+.viola:hover{
+    transform:scale(1.2) rotate(0deg);
+}
+
+@-webkit-keyframes giallo_1{ /*webkit lo fa andare su più browser*/
+    0%{opacity:0;} /*subito non c'è dopo un secondo ottiene l'opacità 1 cioè si vede*/
+    100%{opacity: 1;}
+}
+@-webkit-keyframes verde_1{ /*webkit lo fa andare su più browser*/
+    0%{opacity:0;} /*subito non c'è dopo un secondo ottiene l'opacità 1 cioè si vede*/
+    90%{opacity:0;}
+    100%{opacity: 1;}
+
+}
+@-webkit-keyframes viola_1{ /*webkit lo fa andare su più browser*/
+    0%{opacity:0;} /*subito non c'è dopo un secondo ottiene l'opacità 1 cioè si vede*/
+    90%{opacity: 0;}
+    100%{opacity: 1;}
+}
+

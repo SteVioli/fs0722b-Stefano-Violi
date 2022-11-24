@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni Timing</title>
+    <style>
+          .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px; 
+            border: 1px solid #000;
+        }
+
+        #box1{
+            border-color: orange;
+            animation-name: box_animation;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+        #box2{
+            border-color: rgb(47, 0, 255);
+            animation-name: box_animation;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+        }
+        #box3{
+            border-color: rgb(255, 0, 212);
+            animation-name: box_animation;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+        }
+        #box4{
+            border-color: rgb(255, 0, 0);
+            animation-name: box_animation;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+        }
+        #box5{
+            border-color: rgb(60, 255, 0);
+            animation-name: box_animation;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+
+        @-webkit-keyframes box_animation{
+            0% {transform: translate(0,0);}
+            100% {
+                transform: translate(400px,0) 
+                rotate(90deg);
+                border-radius: 50px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+        <div id="box5" class="box"></div>
+    </div>
+</body>
+</html>
