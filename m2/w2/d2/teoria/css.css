@@ -1,0 +1,4 @@
+.page-link.active{
+    background-color: black;  /* per modificare una classe di bootstrap andare a cercare la classe con ispeziona sull oggetto*/
+    border-color: red;
+}
