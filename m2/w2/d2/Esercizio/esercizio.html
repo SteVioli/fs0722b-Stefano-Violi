@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    <!-- per nascondere le sezioni collapse -->
     <!-- inizio nav -->
     <nav class="navbar navbar-expand-lg bg-light mb-3">
         <div class="container-fluid">
@@ -80,11 +80,13 @@
         <!-- prima sezione -->
 
         <section class="container">
-
+            
             <div class="container mt-2">
-                <div>
-                    <h2 id="saldi">Saldi</h2>
+                <div class="d-flex justify-content-between">
+                    <h2>Saldi</h2>
+                    <a class="btn btn-primary bg-transparent text-primary border border-0" data-bs-toggle="collapse" href="#saldi" role="button" aria-expanded="false" aria-controls="collapseExample">Nascondi i Saldi</a>
                 </div>
+                <div id="saldi">
                 <div class="row">
                     <div class="col-12 col-md-4 col-lg-3 mt-2">
                         <div class="card border border-2 border-info rounded">
@@ -93,7 +95,7 @@
                                 <h5 class="card-title">Titolo</h5>
                                 <p class="card-text fs-6">Some quick example text to build on the card title and make up
                                     the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-info">Prenota</a>
+                                <a href="" class="btn btn-info">Prenota</a>
                             </div>
                         </div>
                     </div>
@@ -132,15 +134,19 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
         <!-- fine prima sezione -->
 
         <!-- inizio seconda sezione -->
         <section class="container mt-4">
             <div class="container">
-                <div>
-                    <h2 id="welcome-summer">Welcome Summer</h2>
-                </div>
+                
+                <div class="d-flex justify-content-between">
+                    <h2>Welcome Summer</h2>
+                
+                <a class="btn btn-primary bg-transparent text-primary border border-0" data-bs-toggle="collapse" href="#welcome-summer" role="button" aria-expanded="false" aria-controls="collapseExample">Nascondi sezione</a></div>
+                <div id="welcome-summer">
                 <div class="row">
 
                     <div class="col-12 col-md-6 col-lg-4 mt-2">
@@ -210,6 +216,7 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </section>
 
@@ -223,10 +230,10 @@
                     <h2 id="offerte">Offerta del giorno</h2>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col col-lg-8">
                         <img src="./assets/spiaggia.webp" class="img-fluid rounded" alt="">
                     </div>
-                    <div class="col-4">
+                    <div class="col col-lg-4">
                         <h3>Fushifaru Maldives</h3>
                         <p>15.01.2021-31.01-2021</p>
                         <p>Ville a partire da 500 €, non fartele sfuggire!</p>
@@ -314,11 +321,11 @@
 
     <!-- inizio footer -->
 
-    <footer class="text-center bg-dark">
-        <div>
-            <button type="button" class="btn btn-dark border border-secondary text-secondary mt-3">Contattaci</button>
+    <footer class="container-fluid bg-dark text-light d-flex flex-column justify-content-center align-items-center py-5">
+        
+            <button type="button" class="btn btn-outline-secondary mb-4">Contattaci</button>
             <p class="text-light mt-3 fs-6">© 2021 Kalina Travel LTD. All Rights Reserved.</p>
-        </div>
+        
 
     </footer>
     <!-- fine footer -->
