@@ -1,0 +1,8 @@
+.btn{
+    color: $colore-secondario;
+    display: inline;
+    padding: $padding-base;
+    &:hover {
+        transform: scale(1.2);
+    }
+}

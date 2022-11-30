@@ -1,0 +1,22 @@
+#button-blocco{
+    padding: 0 20px;
+    margin: 10px 0px 20px 50px;
+}
+.bottone-Subscribe{
+    margin-right: 50px;
+    background: green;
+    &:hover {
+        background: red;
+        border-radius: $b-cerchio;
+        transform: scale(1.5);
+        color: white;
+    }
+}
+.bottone-Join{
+    background: blue;
+    transition:all 0.5s ease;
+    &:hover{
+        border-radius: 10px; 
+        transform: rotate(360deg);
+    }
+}

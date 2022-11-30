@@ -1,0 +1,19 @@
+/* memorizzo un valore*/
+.btn {
+  color: red;
+  display: inline;
+  padding: 20px;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+
+body {
+  width: 90%;
+  color: #4f4f4f;
+}
+
+.container {
+  width: 90%;
+  padding: 20px;
+}/*# sourceMappingURL=main.css.map */
