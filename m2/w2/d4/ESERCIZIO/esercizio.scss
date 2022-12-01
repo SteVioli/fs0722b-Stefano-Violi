@@ -72,6 +72,9 @@ nav {
             height: 50px;
         }
     }
+    textarea{
+        margin-left:$m-5 ;
+    }
     @mixin paragrafo($paragrafi) {
         margin: $m-5;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
