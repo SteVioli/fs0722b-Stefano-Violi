@@ -1,0 +1,6 @@
+@for $m from 1 through 5 {
+    .p#{$m}/* # aggancio {$m il mio contatore}*/{
+        padding-left: $m * 12px;
+        color: green;
+    } /* quindi così prende tutti i p (fa p1 p2 p3 p4 p5) */
+}

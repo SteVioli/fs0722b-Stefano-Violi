@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* +++++ EXTEND +++++++ */
+.box, .mybox {
+  border: 1px solid black;
+  background-color: green;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  width: 200px;
+  text-align: center;
+}
+
+.mybox {
+  font-size: 10px;
+}
+
+/*+++++++ keyword % placeholder +++++++*/
+.mysecondbox, .myfirstbox {
+  border: 1px solid black;
+  background-color: blue;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+}
+.mysecondbox:hover, .myfirstbox:hover {
+  transform: scale(1.2);
+}
+
+.myfirstbox {
+  font-size: 10px;
+  text-align: center;
+}
+
+.mysecondbox {
+  font-size: 20px;
+}
+
+/*+++++++ mixin +++++++*/
+/* lo uso quando un valore si ripete più volte
+come in questo caso il tipo di colore*/
+button.green {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: green;
+  box-shadow: 0 0 10px green;
+  outline: 1px solid green;
+  color: white;
+  border: 1px solid white;
+}
+button.green:hover {
+  color: green;
+  box-shadow: none;
+  background: white;
+}
+
+button.red {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: red;
+  box-shadow: 0 0 10px red;
+  outline: 1px solid red;
+  color: white;
+  border: 1px solid white;
+}
+button.red:hover {
+  color: red;
+  box-shadow: none;
+  background: white;
+}
+
+button.blue {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: blue;
+  box-shadow: 0 0 10px blue;
+  outline: 1px solid blue;
+  color: white;
+  border: 1px solid white;
+}
+button.blue:hover {
+  color: blue;
+  box-shadow: none;
+  background: white;
+}
+
+button.yellow {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: yellow;
+  box-shadow: 0 0 10px yellow;
+  outline: 1px solid yellow;
+  color: white;
+  border: 1px solid white;
+}
+button.yellow:hover {
+  color: yellow;
+  box-shadow: none;
+  background: white;
+}/*# sourceMappingURL=style.css.map */

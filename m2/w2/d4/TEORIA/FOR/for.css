@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.p1 {
+  padding-left: 12px;
+  color: green;
+} /* quindi così prende tutti i p (fa p1 p2 p3 p4 p5) */
+.p2 {
+  padding-left: 24px;
+  color: green;
+} /* quindi così prende tutti i p (fa p1 p2 p3 p4 p5) */
+.p3 {
+  padding-left: 36px;
+  color: green;
+} /* quindi così prende tutti i p (fa p1 p2 p3 p4 p5) */
+.p4 {
+  padding-left: 48px;
+  color: green;
+} /* quindi così prende tutti i p (fa p1 p2 p3 p4 p5) */
+.p5 {
+  padding-left: 60px;
+  color: green;
+} /* quindi così prende tutti i p (fa p1 p2 p3 p4 p5) *//*# sourceMappingURL=for.css.map */
