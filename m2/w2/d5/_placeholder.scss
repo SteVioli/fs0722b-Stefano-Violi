@@ -1,0 +1,19 @@
+%paragrafi{
+    font-weight: $f-w4;
+        font-size: $m-30;
+        &:hover{
+            color: $c-red;
+            font-style: italic;
+        }
+};
+
+%opinioni{
+    margin-left: $m-5;
+    &:hover{
+        transform: scale(1.2);
+        border: $b-classic;
+        border-radius: $b-radius-5;
+        background: $c-red;
+        color: $c-white;
+    }
+}

@@ -1,0 +1,15 @@
+
+@mixin prova {
+    @if $template == test {
+        p{color: $c-red;}
+        h1,h2{color:$c-blue};
+        .nomi-collaboratori{color:$c-black};
+        .button-h1{
+            border-radius: $b-radius-100;
+            background: $c-green;
+        }
+    }
+}
+body{
+    @include prova;
+}

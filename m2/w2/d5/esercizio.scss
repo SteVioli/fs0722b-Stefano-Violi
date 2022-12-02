@@ -1,0 +1,138 @@
+@import 'variabili';
+@import 'placeholder';
+@import 'mixin';
+
+//nav
+.boot{
+    font-size: $f-30;
+}
+#nav{
+    background:$bg-nav ;
+    &:first-child{
+        color: $c-white;
+    }
+    .nav-link{
+        color: $c-red;
+        padding: $p-5;
+    }
+    .active{
+        color: $c-white;
+    }
+    
+}
+//fine nav
+
+//h1 block
+#sfondo-header{
+    background-image: url(./assets/img/pexels-aleksandar-pasaric-325185.jpg);
+    background-size: cover;
+    height: 50vh;
+    @media screen and (min-width:768px) {
+        height: 70vh; 
+    }
+    
+}
+header{
+    h1{
+        font-weight: $f-w4;
+        font-size: 35px;
+        font-family: $f-family;
+
+    }
+    button{
+        background-color:$bg-nav;
+        color: $c-white;
+        padding:$p-10;
+        border-radius: $b-radius-5;
+        &:hover{
+            transform: scale(1.3);
+            margin-left: $m-10;
+            box-shadow:$boxS;
+        }
+    }
+}
+//contenuto principale
+h2{
+    font-family: $f-family;
+}
+.contenuto-1{
+    background-color: $b-img-color;
+    background-size: cover;
+    padding-top: $p-10;
+    h3{ 
+        font-family: $f-family-2;
+        @extend %paragrafi
+       
+    }
+    p:hover{
+        color:$c-white;
+        background-color: $c-black;
+        border-radius: $b-radius-5;
+    }
+}
+
+//fine contenuto principale
+
+//parternship
+.partnership{
+    font-size: 40px;
+    font-weight: $f-w3;
+    
+}
+.partner-icon{
+    width: 200px;
+    @media screen and (min-width:768px) {
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+}
+//fine parternship
+//carousel
+
+    .carousel-img{
+        border-radius: $b-radius-100;
+        width: 100px;
+        box-shadow: $boxS;
+    }
+    .opinioni{
+        @extend %opinioni
+    }
+    .nomi-collaboratori{
+        margin-top: $m-10;
+    }
+
+@media screen and (min-width:769px) {
+   .carousel-img{ 
+    width: 300px;
+    border-radius: 50px;
+    box-shadow: $boxS;
+    margin: auto;
+    }
+    .opinioni{
+        font-size: 20px;
+    }
+    .nomi-collaboratori{
+        margin-top: $m-10;
+        color: $c-red;
+        font-size: 20px;
+        font-style: italic;
+    }
+
+}
+
+//fine carousel
+//footer
+footer{
+    background-color: $bg-nav;
+    color: $c-white;
+    ul{
+        list-style: none;
+        li{font-size: 14px;
+        &:first-child{
+            font-size:medium;
+        }
+    }
+}
+}
+//footer
