@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <!-- 
+        JSON è l'acronimo di javascript object notation -> è un formato per lo scambio di dati
+        JSON non è stato creato -> si basa sull'annotazione letterale degli oggetti (già ben presente in javascript)
+        JSON è stato riscoperto/utilizzato come formato per lo scambio di dati specialmente da quando esiste AJAX 
+        sintassi di JSON si origina dagli oggetti letterali in javascript
+     -->
+</body>
+<script>
+    let JSON = {
+        proprietà1: 'valore',
+        proprietà2: 'valore',
+        proprietà3: 'valore'
+    }
+    // coppie proprietà:valore separate dalla VIRGOLA ad eccezione dell'ultima
+    // l'intero oggetto viene racchiuso tra parentesi {}
+    // a differenza della notazione javascript -> dentro JSON ci sono SOLO valori semplici
+    // posso mettere stringhe, numeri , array , oggetti , valori booleani , null
+    // esempio
+   /* {
+        "home":"epicode.it",
+        "link":"https://www.epicode.it",
+        "argomento":"Standard del web",
+        "aree": [
+            {
+                "area": "CSS",
+                "url":"http://css.epicode.it"
+            },
+            {
+                "area": "javascript",
+                "url":"http://javascript.epicode.it"
+            }
+        ]
+    }*/
+    // inizia con una coppia di parentesi graffe (che racchiudono tutta la struttura)
+    // seguono le coppie proprietà:valore (che possono contenere valori atomici o altri oggetti) attenzione all' uso delle parentesi quadre
+    // json chiede che i valori vengano chiuse tra doppie virgolette e non con gli apici
+    // per accedere ai valori json c'è la classica .dot notation di js
+    oggetto.home // in sto caso darebbe epicode.it
+    oggetto.link // in sto caso darebbe https://www.epicode.it
+    let aree = oggetto.aree // in sto caso darebbe un array
+    for(let i = 0; i < aree.lenght; i++){
+        //
+    }
+    // Json viene usato da javascript tramite ajax
+    // funziona che faccio una richiesta -> e viene restituito l'oggetto
+    $.ajax({
+        url: 'json.html',
+        type: 'GET',
+        dataType: 'json',
+        success // ...
+    })
+</script>
+</html>

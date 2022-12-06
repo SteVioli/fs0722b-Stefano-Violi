@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extends-super-2</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(name, weight){
+                this.name = name;
+                this.weight = weight;
+            }  //dopo aver messo i valori del costrutto, passo a dichiarare un metodo
+            mangia(){
+                return `${this.name} sta mangiando`;
+            }
+            dorme(){
+                return `${this.name} sta dormendo`;
+            }
+            siSveglia(){
+                return `${this.name} si sveglia`; //posso mettere tutti i metodi che voglio
+            }
+        }
+//posso oltre alle proprietà estendere dei metodi
+        class Gorilla extends Animal{
+            constructor(name, weight){
+                super(name,weight);
+            }
+            sale_sugli_alberi(){
+                return `${this.name} sale sugli alberi`;
+            }
+            grida(){
+                return `${this.name} è una bestia di ${this.weight} e sta gridando`;
+            }
+            vigoroso(){
+                return `${super.mangia()} ${this.grida()}`;
+            }
+            dailyRoutine(){
+                return `${super.siSveglia()} ${this.grida()} ${super.mangia()} ${super.dorme()}`; // utilizzare super per il costruttore vecchio e this per il costruttore dove utilizzo il metodo
+            }
+        }
+        function display(content){
+            console.log(content); //funzione per far partire il console log
+        }
+        
+        const gorilla = new Gorilla('George' , '200kg');
+        display(gorilla.mangia());
+        display(gorilla.dorme());
+        display(gorilla.siSveglia());
+        display(gorilla.sale_sugli_alberi());
+        display(gorilla.grida());
+        display(gorilla.dailyRoutine());
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+    "artista": "Max Pezzali",
+    "album": [
+        {
+            "album": "Hanno ucciso l'uomo ragno",
+            "data": 1992,
+            "voto" : 7,
+            "Premi" : null
+        },
+        {
+            "album" : "Nord Sud Ovest Est",
+            "data" : 1993,
+            "voto" : 10,
+            "Premi" : [{
+                "premio 1" : true,
+                "premio 2" : false,
+                "premio 3" :true
+                
+            }]
+        },
+        {
+            "album" : "Max 20",
+            "data" : 2013,
+            "voto" : 9,
+            "Premi" : null,
+            "fine carriera" : [{
+                "soldi fatti" : "infiniti",
+                "successo":true,
+                "lacrime versate": 34,
+                "generazioni coinvolte": [{
+                    "anni 80" : "poco",
+                    "anni 90" : "tanto",
+                    "anni 2000" : "molto",
+                    "anni 2010" : "ascoltano la trap"
+                }]
+            }]
+
+
+        },
+        {
+            "album" : "Time Out",
+            "data" : 2007,
+            "voto" : 7,
+            "emozioni" : [
+                {
+                    "ragazze" : "STUPENDO",
+                    "ragazzi" : "fa schifo"
+                }
+            ]
+        }
+    ]
+}

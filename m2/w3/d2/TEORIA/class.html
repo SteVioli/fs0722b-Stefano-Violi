@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+                // possiamo anche ottenere valori di proprietà utilizzando "get" oppure settare questi valori di proprietà con "set"
+        class User{
+            name; //dichiarazione opzionale. puoi metterla come non metterla
+            surname;
+            age;
+            constructor ( _name = '', _surname = '' , _age = 0 ){
+                this.name = _name;
+                this.surname = _surname;
+                this.age = _age;
+            }
+            greetings(){
+                return `hi ${this.name} ${this.surname}`
+            }
+        }
+
+        let myUser = new User('Mario','Rossi', 43);    
+        console.log(myUser.greetings(), myUser);  //ritorna a video, il metodo che è composto dalla parte dentro ai ``
+                                                  // e la variabile dichiarata con dei valori specifici, prenderà le indicazioni del costruttore
+
+        
+    </script>
+</body>
+</html>

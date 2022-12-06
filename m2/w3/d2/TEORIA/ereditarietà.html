@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ereditarietà</title>
+</head>
+<body>
+    <script>
+        class User {   //questa classe "base" info e valori strettamente necessaria
+            name = '';
+            surname = '';
+            age = '-1';
+            constructor(_name,_surname,_age){
+                this.name = _name;
+                this.surname = _surname;
+                this.age = _age;
+            }
+        }
+        class Student extends User {  //prima classe che estende la base User
+            courses = [];
+        }
+        class Teacher extends User { //seconda classe che estende la base User
+            skills = [];
+        }
+        let utente = new User('Mario','Rossi',30);
+        let studente = new Student('Giuseppe','Verdi',20);
+        let professore= new Teacher('Fabio','Bombo',40);
+
+        studente.courses = ['Web design' , 'OOP'];
+        professore.skills = ['Dialogo', 'Multitasking' ,'Programming'];
+        console.log(utente);
+        console.log(studente);
+        console.log(professore);
+        
+    </script>
+</body>
+</html>

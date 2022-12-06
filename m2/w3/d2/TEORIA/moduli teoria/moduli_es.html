@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esercizio moduli</title>
+</head>
+<body>
+    <script type="module"> //specifico che ho un modulo all'interno , perchè la mia sintassi sarà particolare
+    //creo una cartella apposita "moduli" che conterrà i miei singoli moduli
+        //qua mi importo i moduli che mi servono
+        import { User } from './moduli/user.js';
+        import { Student } from './moduli/student.js';
+        import { Teacher } from './moduli/teacher.js';
+        
+        let utente = new User('Mario','Rossi',30);
+        let studente = new Student('Giuseppe','Verdi',20);
+        let professore = new Teacher('Giulio','Golia',40);
+        
+        studente.courses = ['web designes','grafica'];
+        professore.skills = ['Js','Css','Html'];
+        console.log(utente,professore,studente);
+    </script>        
+</body>
+</html>

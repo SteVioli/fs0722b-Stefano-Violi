@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+<body>
+    <!-- 
+        Javascript è un linguaggio di programmazione "a oggetti" basato sul concetto di prototipo
+        altri linguaggi di programmazione sono basati sul concetto di "classe"
+        differenza sottile perchè negli altri linguaggi, un oggetto è sempre un'istanza di una classe 
+        -> in questi altri linguaggi, un oggetto non può esistere se prima non è stata definita una classe
+        ->successivamente da una classe sarà possibile creare sottoclassi (esempio animali->mammiferi->habitat )
+        in Javascript si definiscono prototipi (Prototype)
+        -> nei linguaggi tradizionali (Java, C#) -> la classe definisce tutte le caratteristiche che può avere un oggetto
+        -> in Javascript possiamo definire alcune caratteristiche e poi arricchirlo (prototype) con nuovi metodi e proprietà
+        ECMA 6 -> introduce "class" con lo scopo di avvicinare javascript agli sviluppatori che provengono da altri contesti
+               -> questo per uniformare gli approcci alla scrittura del codice -> aggiungo la possibilità di definire oggetti a partire dalle classi
+        una classe è un modo alternativo di definire un costruttore
+
+     -->
+     <script>
+        class persona {                             //all'interno della classe
+            constructor(nome,cognome){              //definisco il costruttore tramite la keyword constructor
+                this.nome = nome;
+                this.cognome = cognome;
+                this.email = "";
+                this.indirizzo = "";
+            }
+            mostraNomeCompleto(){
+                return this.nome + " " + this.cognome;
+            }
+        }
+        // il costrutto class è solo una semplificazione sintattica
+        // possiamo creare un nuovo oggetto partendo dalla classe appena definita (operatore SEMPRE new)
+        let marioRossi = new persona('Mario','Rossi');
+        console.log("🚀 ~ file: oggetti-2oGiorno.html:39 ~ marioRossi", marioRossi)
+        // possiamo anche ottenere valori di proprietà utilizzando "get" oppure settare questi valori di proprietà con "set"
+
+        // possiamo creare sottoclassi e ereditarietà
+        // possiamo creare delle sottoclassi estendendo una classe
+        //esempio
+        class programmatore extends persona{   
+        //extends è una KEYWORD che consente di dichiarare che la nuova classe creata (programmatore), deriva dalla classe persona
+        constructor(nome,cognome){ //dentro al costruttore della classe programmatore, richiamiamo tramite "super()" il costruttore della classe persona
+        super(nome,cognome);      //super fa riferimento alla super classe, non è una classe base, ma qualcosa di più  
+        this.linguaggiConosciuti = []; //aggiunge alla classe questo valore (dentro JS la classe è un costruttore di oggetti)
+            }
+        }
+        //ricordiamoci che possiamo definire un oggetto anche senza class!!!
+
+        // keyword static è un metodo definito all'interno della classe e ne dipende strettamente
+        // a differenze degli altri metodi non può essere chiamato nell'oggetto ma solo nella classe
+        // esempio
+        class Animali{
+            constructor(specie){
+                this.specie = specie;
+            }
+            static mostra(){  //con static vuol dire che funziona solo qua dentro
+                return this.specie;
+            }
+        }
+        var gatto = new Animali('specie_di_gatto')
+        gatto.mostra(); //non funziona, non me lo fa vedere
+        Animali.mostra; //qua funziona (funziona solo dentro all'oggetto)
+        
+     </script>
+</body>
+</html>

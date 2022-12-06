@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //altra sintassi di classe
+        class Persona{    //dichiaro una classe
+            constructor(nome,cognome,age) {  //gli creo un costruttore con dei VALORI
+                this.nome = nome;            //lista valori del costruttore
+                this.cognome = cognome;
+                this.age = age;
+                this._email = "";
+                this.indirizzo = "";
+            }
+            mostraNomeCompleto(){           // applico un metodo alla classe che in questo caso mi riporta il nome e il cognome
+                return this.nome + " " + this.cognome;
+            }
+            get email(){return this._email;}  //get mi ottiene un valore    
+            set email(value){                 // set lo setta
+                let emailRegExp = /\w+@\w+\.\w{2,4}/i;      //indica che la mail deve essere una mail valida a livello di caratteri
+                if (emailRegExp.test(value)) {      // condizione se l'email è valida o meno
+                    this._email = value;
+                } else {
+                    console.log('Email non valida');
+                }
+            }
+        }
+        let myPersona = new Persona('Mario','Rossi',43)           
+        console.log(myPersona.mostraNomeCompleto(), myPersona)
+    </script>
+</body>
+</html>
