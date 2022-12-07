@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title"></div>
+    <input type="text" id="usr">
+    <button id="log_btn" onclick="save()">Log</button>
+    <button id="delete_btn" onclick="deleteData()">Delete data</button>
+    <script>
+        window.addEventListener('load', check)
+        function save(){
+            usr = document.getElementById('usr').value //prendo il valore dell'input che è associato all id usr
+            localStorage.setItem('usr',usr);// quello che ha letto lo voglio dentro ad usr
+            check(); //attivo funzione check
+        }
+        function deleteData(){
+            localStorage.removeItem("usr");// questo local storage mi rimuove i dati da usr;
+            check();//attivo funzione check 
+        }
+        function check(){                   // faccio una funzione che mi controlli che se ha qualcosa all'interno di usr avrà una variabile composta da local storage.getItem di usr
+            if(localStorage.getItem('usr')){
+                txt = 'Ciao,' + localStorage.getItem("usr");
+            }else{
+                txt = 'No Data';
+            }
+            document.querySelector('.title').innerHTML = txt;
+        }
+    </script>
+</body>
+</html>

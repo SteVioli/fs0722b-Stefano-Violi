@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+    <!-- novità html
+        -> introduzione del tag audio, video, svg (vettoriale scalabile)
+        -> nuove API per la geolocalizzazione (gelocation) , web workers , canvas (possibilità di fare animazione tramite js)
+        -> L'api che interessa a noi attualmente è il web storage
+        -> web storage -> nasce per risolvere un paio di problemi
+        1. problema dei cookie (massimo 4k)
+        2. impossibile storare cookies differenziati tra due diverse sessioni di navigazione
+        per risolvere questi problemi sono stati creati 2 nuovi oggetti, che fanno parte della famiglia del web storage
+        1. sessionStorage -> dentro il quale abbiamo la persistenza di dati finchè c'è una finestra di navigazione aperta (finchè c'è una sessione)
+        2. localStorage   -> la persistenza dei dati rimane finchè non vengono cancellati (i dati sono in comune a tutte le tab aperte)
+        -> quindi possono ospitare molti più dati dei cookies ( circa 5 mb )
+
+        specifiche:
+        -> singola interfaccia Storage -> sessionStorage e localStorage implementano lo stesso set di metodi
+    -->
+    <script>
+        localStorage.nome = 'federico';           // salvo i dati come in un normale array associativo
+        localStorage.cognome = 'de ambrosis';
+        localStorage.setItem('nome','federico');  // oppure posso utilizzare l'ausilio dei metodi dedicati (esempio coppia dati valore)
+        localStorage.getItem('nome');             // getItem mi restituisce 'federico'
+        // come posso inserire oggetti diversi da stringhe??
+        localStorage.ordini = Array('1','2','3');
+        localStorage.ordini; // ritorna "1,2,3" mi restituisce una stringa
+        // se non ho delle stringhe, devo ricorrere alla serializzazione su Json
+        localStorage.ordini = JSON.stringify(Array(1,2,3));
+        JSON.parse(localStorage.ordini); //ritorna un array di 3 elementi [1,2,3]
+        localStorage.removeItem('key')       // rimuove una key dallo storage
+        localStorage.clear()                // elimina tutte le chiavi
+    </script>
+</body>
+</html>
