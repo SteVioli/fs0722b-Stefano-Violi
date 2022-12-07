@@ -17,14 +17,14 @@
 
     <script>
         function clickCounter() {
-            if (typeof(Storage) != undefined) { //se local storage non è undefined
+            if (typeof (Storage) != undefined) { //se local storage non è undefined
                 if (sessionStorage.clickcount) {
                     sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1; //se c'è un valore aggiungigli 1 
                 } else {
                     sessionStorage.clickcount = 1   // altrimenti metti di default 1
                 }
                 document.getElementById('result').innerHTML = 'Hai cliccato il bottone ' + sessionStorage.clickcount + ' volte questa sessione';
-            }else{
+            } else {
                 document.getElementById('result').innerHTML = 'Il tuo browser non supporta Web Storage'
             }
         }
