@@ -10,18 +10,24 @@
     <h1>Mostra secondi col session Storage</h1>
     <p id="tempo"></p>
     <script>
-       
-    let seconds = 0;
-    let el = document.getElementById('tempo');
-
-    function aumentaSecondi() {
-        if(typeof (Storage) != undefined){
-        sessionStorage.aumentaSecondi = Number(sessionStorage.aumentaSecondi) + (seconds += 1);
-        sessionStorage.setItem('time',el.textContent)
-        el.innerText = "Sei stato qui per " + seconds + " secondi.";
-        }}
-
-    var fine = setInterval(aumentaSecondi, 1000);
+       function storage(){
+        if(typeof(storage) != undefined){
+            timeCounter();
+        }
+        else {
+            document.getElementById("result").innerHTML = "Non supporti web storage";
+        }
+       }
+       function timeCounter(){
+        if(sessionStorage.clickcount){
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        }else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById('tempo').innerHTML = "Tempo trascorso di " + sessionStorage.clickcount + " secondi";
+       }
+    
+       const time = setInterval(timeCounter, 1000);
     </script>
 </body>
 </html>

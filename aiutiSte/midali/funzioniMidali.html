@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <button>Salutami</button>
+    <input type="text" name="nome" placeholder="scrivi cose" required>
+    <ul></ul>
+    <script>
+        //i metodi sono funzioni di oggetti
+        //differenza tra nome e di dove si trovano ( se fanno parte di oggetti si parla di metodi)
+    let btn = document.querySelector('button');
+    let input = document.querySelector('input');
+    
+        
+    btn.addEventListener('click',()=>{
+        let listaUl = document.querySelector('ul');
+        listaUl.innerHTML += `<li>${input.value}</li>`;
+    }) 
+
+    </script>
+</body>
+</html>

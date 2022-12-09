@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = ['Stef','Fabio','Agnese','Sandro','Greta','Sophie'];
+        for (let i = 0; i < array.length; i++) {
+            console.log(array[i])  // ciclo totale
+        }
+        console.log('--------------------')
+        console.log('--------------------')
+        let array1 = ['Stef','Fabio','Agnese','Sandro','Greta','Sophie'];
+        for (let i = 0; i < array1.length; i++) {
+            console.log(array1[i])
+            if (array1[i] == 'Sandro') { // qua mando a schermo tutto quanto fino a quando il mio indice dell'array è quello che ho indicato nella condizione
+                break; // blocco il ciclo appena arrivo alla condizione da me richiesta
+            }
+              // ciclo totale
+        }
+        console.log('--------------------')
+        console.log('--------------------')
+        let arrayContinue = [22,5,45,89,66,54];
+        for (let i = 0; i < arrayContinue.length; i++) {
+            if(arrayContinue[i] % 2 == 0){
+                console.log(arrayContinue[i])
+            }
+            
+        }
+        console.log('--------------------')
+        console.log('--------------------')
+        //per i while e i do-while la Initialize ovvero la [i] va dichiarata fuori
+        let i = 0;
+        while(i<arrayContinue.lenght){
+            console.log(arrayContinue[i]);
+            i++
+        }
+        console.log('--------------------')
+        console.log('--------------------')
+        let k = 0;
+        do{ console.log(arrayContinue[k]);
+            k++
+        }while ('dowhile' , k<arrayContinue.length)
+
+        //il do verifica la condizione prima di verificare la condizione
+        // il for e il while si attivano solo se la condizione è verificata ( esempio i<array.length)
+        // il do while lo si utilizza quando si vuole far si che almeno 1 volta venga eseguito il comando
+           
+        
+
+
+
+        
+    </script>
+</body>
+</html>

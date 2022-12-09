@@ -1,0 +1,15 @@
+img {
+  width: 50px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  box-shadow: 10px 5px 5px black;
+}
+.card:hover {
+  transform: scale(1.2);
+}
+
+h5:hover {
+  color: red;
+}/*# sourceMappingURL=scss.css.map */
