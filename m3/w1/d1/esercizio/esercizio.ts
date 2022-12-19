@@ -1,5 +1,5 @@
 function Check(n1:number,n2:number){
-    let limite:number = Math.floor(Math.random()* 10)
+    let limite:number = Math.floor(Math.random()* 100)
     console.log(limite)
     let diff_1:number = Math.abs(n1-limite)
     console.log(diff_1)
