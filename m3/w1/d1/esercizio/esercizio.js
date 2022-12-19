@@ -1,5 +1,5 @@
 function Check(n1, n2) {
-    var limite = Math.floor(Math.random() * 10);
+    var limite = Math.floor(Math.random() * 100);
     console.log(limite);
     var diff_1 = Math.abs(n1 - limite);
     console.log(diff_1);
