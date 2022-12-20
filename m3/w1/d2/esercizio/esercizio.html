@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esercizio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body>
+    <form action="#">
+    <div class="d-inline-block mb-2">
+    <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input id="primoDeposito" type="number" class="form-control" aria-label="Amount (to the nearest eur)" placeholder="Quanto vuoi depositare">
+        <span class="input-group-text">.00</span>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input id="primoPrelievo" type="number" class="form-control" aria-label="Amount (to the nearest eur)" placeholder="Quanto vuoi prelevare">
+        <span class="input-group-text">.00</span>
+      </div>
+      <button id="btnPrimoDeposito" type="button" class="btn btn-primary">Deposito</button>
+      <button id="btnPrimoPrelievo" type="button" class="btn btn-danger">Prelievo</button>
+    </div>
+
+    <div class="d-inline-block">
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input id="secondoDeposito" type="text" class="form-control" aria-label="Amount (to the nearest eur)" placeholder="Quanto vuoi depositare">
+        <span class="input-group-text">.00</span>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input id="secondoPrelievo" type="text" class="form-control" aria-label="Amount (to the nearest eur)" placeholder="Quanto vuoi prelevare">
+        <span class="input-group-text">.00</span>
+      </div>
+      <button id="btnSecondoDeposito" type="button" class="btn btn-primary">Deposito</button>
+      <button id="btnSecondoPrelievo" type="button" class="btn btn-danger">Prelievo</button>
+    </div>
+    <p id="testo1"></p>
+    <p id="testo2"></p>
+</form>
+    <script src="esercizio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
