@@ -33,10 +33,17 @@ let stefano = new Stefano ('Stefano','Violi',5000)
 console.log(stefano.disp(),stefano.oneDeposit(200),stefano.oneWithDraw(50))
 console.log(donna.oneDeposit(200),donna.oneWithDraw(50),donna.addInterest(10))
 
-let deposito1 = document.getElementById('primoDeposito')
-let prelievo1 = document.getElementById('primoPrelievo')
-let btn_1_depo = document.getElementById('btnPrimoDeposito')
-let btn_1_prel = document.getElementById('btnPrimoPrelievo')
+let deposito1 = document.getElementById('primoDeposito') as HTMLInputElement
+let prelievo1 = document.getElementById('primoPrelievo') as HTMLInputElement   
+let btn_1_depo = document.getElementById('btnPrimoDeposito') as HTMLInputElement
+let btn_1_prel = document.getElementById('btnPrimoPrelievo') as HTMLInputElement   
+let testo1 = document.getElementById('testo1') as HTMLInputElement
+btn_1_depo.addEventListener('click',()=>{
+    let a = document.createElement('div')
+    testo1.innerHTML = deposito1.value
+    testo1.append(a)
+})
+
 
 
 

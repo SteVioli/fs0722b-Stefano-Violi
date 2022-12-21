@@ -4,7 +4,7 @@
 // possiamo avere valori di ritorno diversi
 // 1. elenchiamo tutte le varie versioni che una funzione può avere (senza il corpo della funzione, ma con i tipi di parametri e valori di ritorno)
 // 2. definisco le funzioni e assegno i diversi comportamenti
-function somma(addendo1:number, addendo2:number):number;
+/*function somma(addendo1:number, addendo2:number):number;
 function somma(addendi:number[]):number;
 function somma(a:number | number[], b?:number){
     if(typeof a === "number"){
@@ -21,5 +21,5 @@ function somma(a:number | number[], b?:number){
 }
 
 console.log(somma(11,22));                  //33
-console.log(somma([6,12,18,36]))            //72
+console.log(somma([6,12,18,36]))            //72*/
 
