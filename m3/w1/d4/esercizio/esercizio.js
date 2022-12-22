@@ -67,7 +67,7 @@ fetch("Abbigliamento.json")
         */
         var blocco = document.querySelector('.row');
         var cartaArticolo = document.createElement('div');
-        cartaArticolo.classList.add('col-4');
+        cartaArticolo.classList.add('col-lg-4');
         cartaArticolo.classList.add('col-12');
         cartaArticolo.classList.add('col-md-6');
         cartaArticolo.innerHTML += "\n            <div class=\"card mt-2 d-flex justify-content-center shadow-lg p-3 mb-5 bg-body rounded\">\n            <img src=\"".concat(el.img, "\" class=\"card-img-top mt-1\">\n            <div class=\"card-body justify-content-center p-0\">\n                <h5 class=\"card-title text-center\">").concat(el.capo, " ").concat(el.collezione, "</h5>\n                <p class=\"card-text\">Risparmia <span class=\"risparmio\">") + abbigliamentoSpecifico.getSaldoCapo() + "\u20AC </span>grazie allo sconto del <span class=\"saldo\">".concat(el.saldo, "%</span>. Per un totale di <span class=\"fs-2\">") + abbigliamentoSpecifico.getAcquistoCapo() + "\u20AC</span></p>\n                \n                \n            </div>\n            <a class=\"btn btn-primary text-center\">Acquista!</a>\n            <p>Disponibilit\u00E0 in <span class=\"text-success\">".concat(el.disponibile, "</span></p><p> Quantit\u00E0 disponibili <span class=\"text-danger\">").concat(el.quantita, "</span></p>\n            </div>");
