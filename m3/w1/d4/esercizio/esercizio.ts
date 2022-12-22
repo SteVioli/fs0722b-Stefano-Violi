@@ -82,7 +82,7 @@ fetch("Abbigliamento.json")
 
             let blocco = <HTMLElement>document.querySelector('.row')
             let cartaArticolo = <HTMLElement>document.createElement('div')
-            cartaArticolo.classList.add('col-4')
+            cartaArticolo.classList.add('col-lg-4')
             cartaArticolo.classList.add('col-12')
             cartaArticolo.classList.add('col-md-6')
 
