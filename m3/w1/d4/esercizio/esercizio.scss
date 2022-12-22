@@ -1,0 +1,39 @@
+body{
+    background-color: rgba(0, 0, 0, 0.866);
+    font-family: 'Lobster', cursive;
+img {
+    width: 80px;
+
+}
+h1{ 
+    font-family: 'Prosto One', cursive;
+    color: green;
+}
+h2{
+    color: blue;
+}
+
+.row {
+    .card {
+        background:  linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+        
+        h5 {
+            font-size: 16px;
+            color: red;
+        }
+
+        p {
+            font-size: 12px;
+
+            .risparmio {
+                color: blue;
+            }
+
+            .saldo {
+                font-weight: 600;
+                color: red;
+            }
+        }
+    }
+}
+}
