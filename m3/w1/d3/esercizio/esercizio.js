@@ -1,3 +1,10 @@
+/*let id = document.getElementById('id') as HTMLInputElement
+let nomeUtente = document.getElementById('nome') as HTMLInputElement
+let cognomeUtente = document.getElementById('cognome') as HTMLInputElement
+let ral = document.getElementById('ral') as HTMLInputElement
+let btn = document.getElementById('btn') as HTMLButtonElement
+let div = (document.getElementById('blocco')) as HTMLDivElement
+let id = (<HTMLInputElement>document.getElementById('nome')).value*/
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -102,6 +109,3 @@ console.log(manPolitico.getUtileTasse()); //14000
 console.log(manPolitico.getTasseInps()); //6370  
 console.log(manPolitico.getTasseIrpef()); //21500 
 console.log(manPolitico.getRedditoAnnuoNetto());
-//let id = document.getElementById('id') as HTMLInputElement
-//let ral = document.getElementById('ral') as HTMLInputElement
-//let btn = document.getElementById('btn') as HTMLButtonElement

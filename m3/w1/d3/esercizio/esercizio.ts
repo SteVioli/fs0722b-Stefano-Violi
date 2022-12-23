@@ -1,13 +1,14 @@
-let id = document.getElementById('id') as HTMLInputElement
+/*let id = document.getElementById('id') as HTMLInputElement
 let nomeUtente = document.getElementById('nome') as HTMLInputElement
 let cognomeUtente = document.getElementById('cognome') as HTMLInputElement
 let ral = document.getElementById('ral') as HTMLInputElement
 let btn = document.getElementById('btn') as HTMLButtonElement
-let div = document.getElementById('blocco') as HTMLDivElement
+let div = (document.getElementById('blocco')) as HTMLDivElement
+let id = (<HTMLInputElement>document.getElementById('nome')).value*/
 
 
 abstract class Lavoratore {
-     nome:string;
+    nome:string;
     cognome:string;
     protected codRedd:number;
     protected redditoAnnuoLordo:number;
