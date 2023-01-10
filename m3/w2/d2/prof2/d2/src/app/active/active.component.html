@@ -1,8 +1,13 @@
 <h1>Post attivi</h1>
 
 <div class="card" style="width: 18rem;" *ngFor="let p of posts">
+  <!-- con *ngFor posso manipolare tutto quello che è all interno del contenitore, qua dico per p (singolo elemento) di posts che è il mio array che devo ciclare, in questo caso posts:Posts[]
+
+  -->
     <div class="card-body">
         <h5 class="card-title">{{p.id}} - {{p.title}}</h5>
         <p class="card-text">{{p.body}}</p>
     </div>
+
+    <!-- doppia {{}} per utilizzare javascript con angular in html -->
 </div>

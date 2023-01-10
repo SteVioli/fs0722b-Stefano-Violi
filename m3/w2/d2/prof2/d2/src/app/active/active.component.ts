@@ -9,7 +9,7 @@ import { PostService } from '../post.service';
 })
 export class ActiveComponent implements OnInit {
 
-  posts:Post[] = []
+  posts:Post[] = []     //devo creare un array che mi servirà per ciclarlo nell html con *ngFor
 
 
   // pSrv:PostService;
@@ -20,10 +20,13 @@ export class ActiveComponent implements OnInit {
 
   ngOnInit(): void {
     // this.posts = this.ps.getPostFiltrati(true)
-   
+
     this.ps.getPostsFiltrati(true).then((arr)=>{
       this.posts = arr
-    })
+    }) //il parametro impostato da post.service è a:boolean, quindi qua specifico true o false a seconda che quando faccio il fetch voglio utilizzare in questo caso active = true oppure false
+
+
+
     // this.posts = await this.ps.getPostsFiltered(true)
     //this.ps.getPostsFiltered(true).then(arr=>{this.posts = arr})
 
