@@ -1,0 +1,16 @@
+<div
+  class="container d-flex flex-column justify-content-center align-items-center"
+>
+  <h1>Parent-Child</h1>
+  <app-card>
+    <!--  Tutto succede dentro ad app card -->
+    <h5 class="card-title">Titolo Card</h5>
+    <div class="card-body">
+      <app-user-info [user]="utente" *ngFor="let utente of users">
+      </app-user-info>
+      <!-- App users lo bindiamo con user, quindi fa un ciclo for per ogni utente dentro a user
+    App card viene attivato/rigenerato per ogni volta che viene trovato un dato ( fino a che il ciclo non finisce insomma )
+    --></div>
+  </app-card>
+  <a href="http://www.google.it"></a>
+</div>
