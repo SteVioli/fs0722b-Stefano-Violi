@@ -1,0 +1,12 @@
+
+<div class="text-center mt-2">
+  <input type="text" placeholder="Add Tasks" #valore><button class="btn btn-danger ms-2" required pattern="[A-Za-z]" (click)="addTask(valore.value)">Crea</button>
+</div>
+
+<div class="text-center container text-align-center">
+  <ul class="row align-items-center" *ngFor="let i of toDo" class="list-unstyled" >
+    <li class="d-flex align-items-center justify-content-center liGen bg-dark col rounded-pill shadow-lg mt-2" *ngIf="i.completed"><b>Task Nr° {{i.id+1}}         <span>{{i.title | uppercase}}</span></b><button id="completa" class="btn btn-success ms-2 py-1 px-2" (click)="todoServ.checkCompleted(i.id)">{{i.id+1}}° Task Done</button></li>
+  </ul>
+  <p class="liGen mt-3" *ngIf="toDo.length == 0">Nessuna Task in programma, inizia a porti obiettivi!</p>
+</div>
+

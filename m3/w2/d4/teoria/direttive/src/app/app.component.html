@@ -21,7 +21,10 @@
   <h3 *ngIf="active">Riga di testo predefinita</h3>
   <h3 *ngIf="!active">Riga di testo alternativa</h3>
 
-  <hr />
+  <h3 *ngIf="active">Riga di testo predefinita</h3>
+  <h3 *ngIf="!active">Riga di testo predefinita<button class="btn btn-primary">Suca</button></h3>
+
+  <hr/>
 
   <!-- Modo 3 : ng-template -->
   <h3 *ngIf="active; else alternativo">Riga di testo predefinita</h3>
