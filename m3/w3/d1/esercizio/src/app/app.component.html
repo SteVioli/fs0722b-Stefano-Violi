@@ -1,0 +1,13 @@
+
+<div class="row">
+  <p >numero foto preferite {{numeroLike}} </p>
+<div class="card col-4"  *ngFor="let photo of photos">
+  <img src="{{photo.avatar}}" class="card-img-top" alt="foto">
+  <div class="card-body">
+    <p class="card-text"> {{photo.first_name}} {{photo.last_name}}</p>
+    <button class="btn btn-danger" (click)="deleteFoto(photo.id)">Elimina</button>
+    <button class="btn btn-success ms-2"  *ngIf="!photo.like" (click)="likeFoto(photo.id)">Mi piace</button>
+    <button class="btn btn-primary ms-2"  *ngIf="photo.like"(click)="unLike(photo.id)">Non mi piace</button>
+  </div>
+ </div>
+</div>
