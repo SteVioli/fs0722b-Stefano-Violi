@@ -21,7 +21,8 @@ export class ReactiveComponent implements OnInit {
         debolezze: this.fb.control(null),
         nemico: this.fb.control(null,[Validators.required,Validators.maxLength(10)]),
         pianeta: this.fb.control(null,[Validators.required,Validators.minLength(5)]),
-        poteri: this.fb.array(['']),
+        poteri: this.fb.array([''],[Validators.required])
+
       }),
 
 

@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "email": "dadegi@gmail.com",
+      "password": "$2a$10$1.aktMgM7sVmW6fLsSFxw.Z9L.aKkwAz7vaSioK8hMtfP5oME6LTG",
+      "name": "Dario",
+      "id": 1
+    },
+    {
+      "email": "fabio@fabio.fabio",
+      "password": "$2a$10$gx22C8ITORQ2dIzmvkiCb.iszWr8lJLF13zEO6iZV7jOu0gKgTQb2",
+      "name": "Fabio",
+      "surname": "Violi",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tellus urna, aliquet sit amet enim at, rhoncus malesuada mi. Proin a consectetur lectus. Quisque sit amet hendrerit mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc id condimentum nibh. Vivamus pretium elementum erat eu elementum. Curabitur vehicula convallis nisi, id mattis elit convallis ac. Nam in turpis mauris. Duis euismod scelerisque feugiat. Maecenas semper commodo diam vitae volutpat. Nulla ac porttitor diam. Cras dictum rhoncus condimentum.",
+      "title": "Lorem ipsum dolor sit amet",
+      "active": true,
+      "type": "news",
+      "author": "marcoss"
+    },
+    {
+      "id": 2,
+      "body": "In placerat ultricies odio sit amet eleifend. Sed vestibulum interdum ligula eget congue. Proin ut varius lacus, blandit laoreet neque. Etiam sit amet erat tempus, consequat est sed, posuere ex. Maecenas dolor ipsum, tempor quis ex ac, finibus porttitor tellus. Ut vitae ullamcorper mauris. Proin sed viverra mi. Maecenas ultricies rutrum felis, in fermentum ex malesuada a. Pellentesque lacinia magna odio, mattis ornare dolor hendrerit sed. Nulla aliquet magna leo, eu aliquet libero facilisis et. Sed aliquam vel est eu consequat. Maecenas turpis ex, viverra id turpis eu, lacinia sollicitudin nisl. Etiam erat tortor, commodo eu placerat id, vulputate non nisl. Praesent ut eros a nulla porttitor porttitor ac tincidunt purus.",
+      "title": "In placerat ultricies odio",
+      "active": true,
+      "type": "education",
+      "author": "Lusa"
+    },
+    {
+      "id": 3,
+      "body": "Nullam nec odio ullamcorper, lacinia est id, pretium risus. Integer suscipit sapien lectus. Sed quis dui sit amet sem feugiat vehicula. Etiam ipsum neque, venenatis non felis non, vestibulum venenatis turpis. Donec pretium lectus quis nisl fermentum, accumsan gravida urna varius. Duis laoreet lectus dignissim, fringilla risus id, ornare nisl. Etiam quis erat a diam sagittis sodales. Cras ac mi quam. Pellentesque venenatis mauris eget efficitur porta. Curabitur bibendum vel eros a fringilla. Ut sodales venenatis consequat. Nam mattis finibus accumsan. Vivamus mollis mi lorem, eget pulvinar tortor mollis at. Quisque pulvinar aliquam nisi ac euismod. Quisque malesuada diam sodales quam fringilla vulputate.",
+      "title": "Nullam nec odio ullamcorper",
+      "active": false,
+      "type": "politic",
+      "author": "Carlo"
+    },
+    {
+      "id": 4,
+      "body": "Quisque ac auctor lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Donec porttitor finibus odio, sed consectetur ligula sodales at. Morbi tempus ligula leo, a egestas purus sagittis nec. Suspendisse egestas lobortis arcu vel pharetra. Duis blandit mollis malesuada. Curabitur ut suscipit turpis. Integer ac nibh congue, ultrices arcu vel, imperdiet urna. Sed pulvinar mattis mollis. Sed lobortis ultrices nulla, ac blandit tortor auctor a. In placerat blandit fermentum. Vestibulum tempus lacus dignissim rhoncus lacinia. Nulla id felis enim.",
+      "title": "Quisque ac auctor lectus",
+      "active": false,
+      "type": "news",
+      "author": "Mario"
+    },
+    {
+      "id": 5,
+      "body": "Cras aliquam magna id mi semper, sed sollicitudin mauris volutpat. Curabitur id erat sagittis, dignissim sem ac, porttitor dolor. Quisque fermentum molestie elit cursus sagittis. Donec ac nisl eu ex porttitor aliquam id quis orci. Nulla mollis dictum gravida. Suspendisse cursus elementum rhoncus. Proin ullamcorper, leo a fermentum molestie, elit tortor faucibus nisl, non placerat libero libero ut eros. In quis lacus nec ante blandit faucibus.",
+      "title": "Cras aliquam magna id mi semper",
+      "active": true,
+      "type": "news",
+      "author": "Mario"
+    }
+  ]
+}

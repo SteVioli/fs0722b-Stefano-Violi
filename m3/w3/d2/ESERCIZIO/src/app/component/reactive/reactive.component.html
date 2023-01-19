@@ -24,7 +24,7 @@
           </div>
           <div class="form-group" formArrayName="poteri">
               <label for="poteri">Super poteri</label>
-              <button class="btn btn-primary" type="button" id="poteri" (click)="addPoteri()">Aggiungi Potere</button>
+              <button class="btn btn-primary" type="button" (click)="addPoteri()">Aggiungi Potere</button>
               <div class="d-flex flex-column" *ngFor="let potere of getPoteriF() ; let i = index">
               <input class="form-control" [formControlName]="i" type="text">
             </div>
@@ -49,7 +49,7 @@
                 <ng-container *ngIf="getErrorsC('infoGenerali.pianeta','minlength')" >Lunghezza minima 5 caratteri</ng-container>
             </span>
           </div>
-          <button type="submit" (click)="submit()" class="btn btn-danger">Invia Form</button>
+          <button type="submit" (click)="submit()" class="btn btn-danger" [disabled]="form.invalid">Invia Form</button>
         </div>
       </form>
     </div>
