@@ -1,0 +1,10 @@
+.bgnav{
+    background-color: rgba(21, 7, 100, 0.626);
+    border: solid 1px black;
+    border-radius: 5px;
+    a{
+        &:hover{
+            color:white
+        }
+    }
+}
