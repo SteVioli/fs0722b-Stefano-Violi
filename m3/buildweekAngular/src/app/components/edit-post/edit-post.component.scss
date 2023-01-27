@@ -1,0 +1,90 @@
+.container{
+  background-image: url('../../../assets/img/bgCucina.jpg');
+  height: 100%;
+}
+
+
+#form{
+  padding-top: 220px;
+  margin: auto;
+  width: 700px;
+  font-family: 'Roboto', sans-serif;
+  div{
+    display: flex;
+    flex-direction: column;
+    label{
+      font-size: 1.7em;
+      font-weight: 500;
+      color: white;
+      background-image: url('../../../assets/img/legnoBG.jpg');
+      padding-left: 10px;
+    }
+    #buttons{
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 5px;
+      button{
+       font-size: 1.5em;
+       font-weight: 700;
+       margin-right: 10px;
+
+      }
+    }
+
+  }
+}
+
+.bb{
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+
+#addImage{
+  padding: 0 4px;
+  border-radius: 10px;
+  background-color: #1890ff;
+  color: white;
+  &:hover{
+    transform: scale(1.1);
+    font-weight: 500;
+}
+}
+#sendPost{
+  width: 100px;
+  display: flex;
+  align-items: center;
+  span{
+    display: flex;
+    align-items: center;
+  }
+  &:hover{
+    background-color: green;
+    transform: scale(1.1);
+  }
+}
+#back{
+  padding: 0 4px;
+  border-radius: 10px;
+  background-color: yellow;
+  color: black;
+  border: none;
+  &:hover{
+    background-color:rgb(231, 22, 22);
+    transform: scale(1.1);
+    color: white;
+  }
+}
+#postInput{
+  height: 300px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  background-color: rgba($color: #ffffff, $alpha: 0.7);
+  font-size: 20px;
+}
+#titleInput{
+  border-radius: 5px;
+  background-color: whitesmoke;
+  background-color: rgba($color: #ffffff, $alpha: 0.7);
+
+}
